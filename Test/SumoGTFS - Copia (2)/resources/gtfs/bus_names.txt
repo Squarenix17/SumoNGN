@@ -1,0 +1,675 @@
+# Format matches Extraction version: V6.5 
+# <?xml version="1.0" encoding="UTF-8"?>
+# 
+# <!-- generated on 2022-07-16 19:07:53 by Eclipse SUMO netconvert Version 1.14.0
+# -->
+# 
+# <configuration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/netconvertConfiguration.xsd">
+# 
+#     <input>
+#         <sumo-net-file value="resources\gtfs\numerical.net.xml"/>
+#     </input>
+# 
+#     <output>
+#         <output-file value="resources\gtfs\bus.net.xml"/>
+#         <dlr-navteq-output value="resources\gtfs\bus"/>
+#         <dlr-navteq.precision value="0"/>
+#         <output.street-names value="true"/>
+#         <output.original-names value="true"/>
+#     </output>
+# 
+#     <processing>
+#         <numerical-ids value="true"/>
+#         <dismiss-vclasses value="true"/>
+#         <geometry.min-radius.fix.railways value="false"/>
+#         <geometry.avoid-overlap value="false"/>
+#         <geometry.max-grade.fix value="false"/>
+#         <offset.disable-normalization value="true"/>
+#         <lefthand value="false"/>
+#     </processing>
+# 
+#     <edge_removal>
+#         <keep-edges.by-type value="highway.living_street,highway.motorway,highway.motorway_link,highway.primary,highway.primary_link,highway.residential,highway.secondary,highway.tertiary,highway.tertiary_link,highway.trunk,highway.trunk_link,highway.unclassified"/>
+#     </edge_removal>
+# 
+#     <junctions>
+#         <no-internal-links value="true"/>
+#         <no-turnarounds value="true"/>
+#         <junctions.corner-detail value="0"/>
+#         <junctions.limit-turn-speed value="5.5"/>
+#         <rectangular-lane-cut value="false"/>
+#     </junctions>
+# 
+#     <pedestrian>
+#         <walkingareas value="false"/>
+#     </pedestrian>
+# 
+#     <report>
+#         <aggregate-warnings value="1"/>
+#     </report>
+# 
+# </configuration>
+# 
+#
+# NAME_ID	PERMANENT_ID_INFO	Name
+# [elements] 620
+584	0	4
+340	0	A22
+339	0	Autostrada del Brennero
+566	0	Canova
+120	0	Cavalcavia di Martignano
+219	0	Corso III Novembre
+266	0	Corso Michelangelo Buonarroti
+281	0	Corso degli Alpini
+7	0	Corso del Lavoro e della Scienza
+103	0	EX SS 47 delle Laste
+348	0	Largo Donatori volontari del sangue
+345	0	Largo Eugenio Prati
+580	0	Largo Giosuè Carducci
+521	0	Largo Luigi Pigarelli
+343	0	Largo Medaglie d&apos;Oro
+510	0	Largo Nazario Sauro
+496	0	Largo Padre Teofilo
+545	0	Largo Porta Nuova
+65	0	Località Cernidor
+112	0	Località I Laghetti
+111	0	Località Martignano
+202	0	Località Negrano
+62	0	Località Piazzina
+480	0	Località di Centa
+80	0	Lungadige Giacomo Leopardi
+67	0	Lungadige Louis Braille
+351	0	Lungadige Marco Apuleio
+611	0	Lungadige Monte Grappa
+440	0	Lungadige San Nicolò
+550	0	Piazza Centa
+511	0	Piazza Dante
+366	0	Piazza General Antonio Cantore
+377	0	Piazza Giannantonio Manci
+130	0	Piazza Giuseppe Menghin
+561	0	Piazza Leonardo da Vinci
+48	0	Piazza Madonna delle Laste
+437	0	Piazza Monsignor Giuseppe Placido Nicolini
+573	0	Piazza Raffaello Sanzio
+482	0	Piazza Santa Maria Maggiore
+574	0	Piazza Silvio Pellico
+221	0	Piazza Venezia
+136	0	Piazza Vicenza
+495	0	Piazza dei Canòpi
+49	0	Piazza dei Cappuccini
+154	0	Piazza dei Predaroi
+560	0	Piazza del Concilio
+520	0	Piazza del Duomo
+14	0	Piazza della Grotta
+317	0	Piazza della Libertà
+341	0	Piazza della Portella
+581	0	Piazza delle Erbe
+113	0	Piazza di San Donà
+346	0	Piazzale Divisioni Alpine
+215	0	Piazzale Europa
+335	0	Piazzetta Luigi Negrelli
+299	0	Piazzetta Sant&apos;Apollinare
+315	0	Piazzetta del Mónt
+291	0	Pinara
+257	0	Pista Ciclabile Valle dell&apos;Adige
+609	0	Ponte Alto
+619	0	Ponte Delle Dame di Sion
+608	0	Ponte San Nicolò
+205	0	Ponte di San Lorenzo
+564	0	Raccordo al casello sud
+83	0	Rione San Marco
+11	0	SP 131 del Vino 2 tronco
+563	0	SP ex SS47
+445	0	SP17
+13	0	SP204
+353	0	SP90 Tronco II
+101	0	SS ex SS47
+274	0	SS12
+509	0	SS45bis
+515	0	SS47
+89	0	Salita Filippo Manci
+25	0	Salita Giovanni Ciccolini
+153	0	Salita Giuseppe dalla Fior
+476	0	Salita Sant&apos;Agata
+297	0	Salita Santa Lucia
+50	0	Salita Sodegerio da Tito
+30	0	Salita Vittore Ricci
+26	0	Salita Vittorio Largaiolli
+400	0	Salita dei Giardini
+37	0	Salita dei Molini
+307	0	Salita della spalliera
+508	0	Strada Gardesana di Trento
+444	0	Strada Imperiale
+201	0	Strada Rifugio del Calisio
+514	0	Strada Statale 47 della Valsugana
+76	0	Strada Stretta
+441	0	Strada dei Bindesi
+562	0	Strada dei Crozi
+169	0	Strada della Pozzata
+326	0	Strada della Valsugana
+284	0	Strada delle Tabarelle
+10	0	Strada di Montevaccino
+254	0	Strada di Val calda
+285	0	Strada per Maranza
+607	0	Strade dell&apos;Interporto
+273	0	Tangenziale Ovest
+503	0	Tangenziale Sud
+34	0	Via  Dei Cappuccini
+362	0	Via 2 Giugno 1946
+602	0	Via 24 Maggio 1915
+178	0	Via 25 aprile 1945
+99	0	Via 26 settembre 1959
+23	0	Via 4 Novembre (1918)
+423	0	Via 8 Marzo
+140	0	Via Adamello
+18	0	Via Aeroporto
+127	0	Via Alcide De Gasperi
+283	0	Via Aldo Schmid
+524	0	Via Alessandro Manzoni
+376	0	Via Alessandro Volta
+55	0	Via Alessio Pezcoller
+192	0	Via Alla Veduta
+591	0	Via Altipiani
+32	0	Via Ancilla Marighetto &quot;Ora&quot;
+604	0	Via Andrea Pozzo
+9	0	Via Angelo Bettini
+288	0	Via Anna Frank
+481	0	Via Anna Maestri
+161	0	Via Annibale Apollonio
+187	0	Via Antonia Pruner
+279	0	Via Antonio Abondi
+473	0	Via Antonio Detassis
+389	0	Via Antonio Fogazzaro
+575	0	Via Antonio Gazzoletti
+148	0	Via Antonio Gramsci
+416	0	Via Antonio Pranzelores
+300	0	Via Antonio Rosmini
+557	0	Via Antonio Stoppani
+54	0	Via Antonio Tambosi
+471	0	Via Antonio Vivaldi
+530	0	Via Antonio da Trento
+163	0	Via Aosta
+3	0	Via Asiago
+68	0	Via Asilo Pedrotti
+544	0	Via Augusto Avancini
+231	0	Via Augusto Goio
+572	0	Via Aurelio Nicolodi
+422	0	Via Avisio
+457	0	Via Banala
+382	0	Via Bartolameo da Trento
+533	0	Via Bartolomeo Malfatti
+494	0	Via Bassa
+100	0	Via Bassano
+358	0	Via Beato Giacomo Alberione
+451	0	Via Bellavista
+241	0	Via Benedetto Gentilotti
+528	0	Via Benedetto Giovanelli
+429	0	Via Beniamino Kofler
+28	0	Via Bepi Mor
+174	0	Via Berlina
+347	0	Via Berlino
+420	0	Via Bernardino Bomporto
+592	0	Via Bezzecca
+349	0	Via Bolghera
+342	0	Via Bolzano
+182	0	Via Borino
+579	0	Via Brennero
+417	0	Via Brenz
+16	0	Via Brescia
+479	0	Via Brigata Acqui
+466	0	Via Bruno Cetto
+405	0	Via Bruno de Finetti
+222	0	Via Caduti di Nassirya
+302	0	Via Cagliari
+270	0	Via Caio Valerio Mariano
+518	0	Via Calepina
+583	0	Via Camillo Benso Cavour
+433	0	Via Carlo Alberto Bauer
+570	0	Via Carlo Antonio Pilati
+85	0	Via Carlo Bertoldi
+519	0	Via Carlo Dordi
+606	0	Via Carlo Martini
+320	0	Via Carlo e Valeria Jülg
+185	0	Via Carè Alto
+430	0	Via Castel dei Merli
+477	0	Via Castel di Gardolo
+12	0	Via Castel di Pietrapiana
+249	0	Via Castelbarco
+143	0	Via Cauriol
+36	0	Via Centochiavi
+413	0	Via Centrale
+483	0	Via Cesare Abba
+197	0	Via Cesarini
+17	0	Via Clemente Andreatta
+512	0	Via Clementino Vannetti
+8	0	Via Clorinda Veglia Menguzzato
+554	0	Via Col di Lana
+531	0	Via Coni Zugna
+316	0	Via Cristoforo Benedetti
+129	0	Via Cristoforo Busetti
+142	0	Via Damiano Chiesa
+456	0	Via Danilo Paris
+460	0	Via Dante Sartori
+126	0	Via Del Ponte
+175	0	Via Desiderio Reich
+569	0	Via Dietro Le Mura B
+585	0	Via Dietro le Mura A
+502	0	Via Dogana
+145	0	Via Don Alfonso Anselmi
+209	0	Via Don Francesco Torresani
+588	0	Via Don Giovanni Battista Zanella
+164	0	Via Don Leone Serafini
+359	0	Via Don Lorenzo Milani
+552	0	Via Don Narciso Sordo
+439	0	Via Don Savino Pedrolli
+66	0	Via Don Tommaso Dallafior
+493	0	Via Don Umberto Pessina
+191	0	Via Doss Castion
+216	0	Via Dosso Dossi
+323	0	Via Drava
+294	0	Via Dòs Trento
+499	0	Via Edda Albertini
+367	0	Via Edmondo De Amicis
+371	0	Via Edmund Mach
+193	0	Via Eduino Fellin
+462	0	Via Emanuele Lanzerotti
+43	0	Via Enrico Conci
+59	0	Via Enrico Fermi
+618	0	Via Enrico Tambosi
+537	0	Via Ergisto Bezzi
+484	0	Via Ernesta Bittanti
+556	0	Via Ernesto Sestan
+46	0	Via Ezio Franceschini
+61	0	Via Ezio Maccani
+394	0	Via Fabio Filzi
+286	0	Via Felice e Gregorio Fontana
+60	0	Via Fersina
+21	0	Via Filari Longhi
+613	0	Via Filippo Serafini
+387	0	Via Fiume
+523	0	Via Francesco Ambrosi
+308	0	Via Francesco Antonio Giongo
+555	0	Via Francesco Barbacovi
+543	0	Via Francesco Ferruccio
+612	0	Via Francesco Guardi
+360	0	Via Francesco Mattedi
+356	0	Via Francesco Oradini
+527	0	Via Francesco Petrarca
+395	0	Via Fratelli Bronzetti
+310	0	Via Fratelli Perini
+0	0	Via Gabbiolo
+44	0	Via Galassa
+513	0	Via Galileo Galilei
+383	0	Via Gandhi
+251	0	Via Gaspare Crivelli
+551	0	Via Giacomo Bresadola
+131	0	Via Giacomo Matteotti
+486	0	Via Giambattista Unterveger
+265	0	Via Gian Battista Lampi
+497	0	Via Gian Domenico Romagnosi
+27	0	Via Giancarlo Maroni
+576	0	Via Giannantonio Manci
+465	0	Via Giarette
+333	0	Via Gino Bartali
+397	0	Via Gino Buccella
+605	0	Via Gino Onestinghel
+150	0	Via Gino Pancheri
+598	0	Via Giovanni Antonio Scopoli
+589	0	Via Giovanni Battista Borsieri
+2	0	Via Giovanni Battista Fattori
+322	0	Via Giovanni Battista Trener
+313	0	Via Giovanni Falcone
+567	0	Via Giovanni Oberziner
+298	0	Via Giovanni Ossanna
+203	0	Via Giovanni Pascoli
+280	0	Via Giovanni Pedrotti
+170	0	Via Giovanni Pierluigi da Palestrina
+506	0	Via Giovanni Prati
+525	0	Via Giovanni Segantini
+534	0	Via Giovanni a Prato
+595	0	Via Giovanni e Tina Lorenzoni
+213	0	Via Giulio Ciurletti
+487	0	Via Giuseppe Brunner
+186	0	Via Giuseppe Canestrini
+391	0	Via Giuseppe Ferrandi
+590	0	Via Giuseppe Gerola
+516	0	Via Giuseppe Gilli
+157	0	Via Giuseppe Giusti
+155	0	Via Giuseppe Grazioli
+1	0	Via Giuseppe Tosetti
+195	0	Via Giuseppe Verdi
+458	0	Via Giuseppina Bassetti
+248	0	Via Gocciadoro
+535	0	Via Gorizia
+418	0	Via Graffiano
+424	0	Via Grezoni
+488	0	Via Guglielmo Marconi
+615	0	Via Guglielmo Ranzi
+5	0	Via Hermann Gmeiner
+414	0	Via Herrsching
+446	0	Via Hubert Jedin
+368	0	Via Isarco
+468	0	Via Jacopo Aconcio
+455	0	Via Laurence Feininger
+137	0	Via Lavisotto
+459	0	Via Leopoldo Pergher
+276	0	Via Livio Druso
+601	0	Via Livio Marchetti
+217	0	Via Luigi Bonazza
+450	0	Via Luigi Brugnara
+232	0	Via Luigi Caneppele
+384	0	Via Luigi Einaudi
+282	0	Via Luigi Senesi
+399	0	Via Luigi de Campi
+160	0	Via Luisa Anzoletti
+190	0	Via Madonna della Corona
+74	0	Via Madonnina
+292	0	Via Maestri del Lavoro
+593	0	Via Malta
+541	0	Via Mantova
+139	0	Via Maranza
+571	0	Via Marco Pola
+24	0	Via Margone
+438	0	Via Marino Stenico
+87	0	Via Mario Cavalieri
+108	0	Via Marnighe
+159	0	Via Marsala
+277	0	Via Martino Aichner
+39	0	Via Marzola
+472	0	Via Mattia Carneri
+115	0	Via Mesiano
+259	0	Via Michelangelo Mariani
+448	0	Via Milano
+121	0	Via Missioni Africane
+548	0	Via Monsignor Celestino Endrici
+98	0	Via Monte Baldo
+355	0	Via Monte Calisio
+597	0	Via Monte Corno
+179	0	Via Montello
+102	0	Via Muralta
+119	0	Via Nedda Falzolgher
+547	0	Via Nicoló d&apos;Arco
+428	0	Via Nilo Piccoli
+206	0	Via Noce
+303	0	Via Orazio Benevoli
+398	0	Via Ortigara
+594	0	Via Ottaviano Rovereti
+614	0	Via Ottone Brentari
+183	0	Via Padova
+51	0	Via Padre Alberto Gianordoli
+372	0	Via Padre Emilio Chiocchetti
+90	0	Via Padre Eusebio Chini
+235	0	Via Padre Eusebio Iori
+162	0	Via Palermo
+344	0	Via Paludi
+336	0	Via Panté
+314	0	Via Paolo Borsellino
+501	0	Via Paolo Orsi
+492	0	Via Papiria
+57	0	Via Passirio
+272	0	Via Pasubio
+128	0	Via Piave
+538	0	Via Pietro Andrea Mattioli
+338	0	Via Pinara
+70	0	Via Ponte Alto
+110	0	Via Primo Maggio
+411	0	Via Provina
+271	0	Via Ragazzi del &apos;99
+184	0	Via Ravenna
+92	0	Via Redondolo
+596	0	Via Regina Pacis
+421	0	Via Renato Lunelli
+532	0	Via Riccardo Zandonai
+617	0	Via Rienza
+42	0	Via Roberto da Sanseverino
+542	0	Via Roccabruna
+517	0	Via Rodolfo Belenzani
+504	0	Via Roggia Grande
+549	0	Via Roma
+220	0	Via Romano Guardini
+144	0	Via Sabbionare
+180	0	Via Sabbioni
+93	0	Via Salé
+69	0	Via San Bartolameo
+406	0	Via San Bernardino
+453	0	Via San Daniele Comboni
+402	0	Via San Francesco d&apos;Assisi
+452	0	Via San Giorgio
+603	0	Via San Giovanni
+443	0	Via San Giovanni Bosco
+318	0	Via San Giovanni Nepomuceno
+375	0	Via San Lorenzo
+610	0	Via San Marco
+301	0	Via San Martino
+587	0	Via San Pietro
+261	0	Via San Pio X
+337	0	Via San Rocco
+188	0	Via San Vito
+210	0	Via Sant&apos;Anna
+565	0	Via Sant&apos;Antonio
+559	0	Via Santa Croce
+529	0	Via Santa Margherita
+295	0	Via Santa Maria Maddalena
+410	0	Via Santa Marina
+304	0	Via Santi Cosma e Damiano
+578	0	Via Santissima Trinitá
+207	0	Via Savino Giacomoni
+275	0	Via Scipio Sighele
+489	0	Via Secondo da Trento
+278	0	Via Silvano Natale
+252	0	Via Silvio Pegoretti
+167	0	Via Simone Felice Crosina e Dante Sartori
+125	0	Via Sommarive
+31	0	Via Soprasasso
+94	0	Via Spré
+357	0	Via Stefano Salterio
+374	0	Via Stella
+321	0	Via Talvera
+392	0	Via Tofane
+381	0	Via Tommaso Gar
+577	0	Via Tonale
+393	0	Via Torquato Taramelli
+71	0	Via Torre D&apos;Augusto
+64	0	Via Torre Vanga
+526	0	Via Torre Verde
+238	0	Via Torricelle
+151	0	Via Tullio Garbari
+237	0	Via Tullio Odorizzi
+258	0	Via Umberto Giordano
+146	0	Via Umberto Moggioli
+289	0	Via Val Gola
+38	0	Via Valdacole
+454	0	Via Valdacòle
+412	0	Via Valembrar
+226	0	Via Valentina Zambra
+176	0	Via Valnigra
+122	0	Via Venezia
+319	0	Via Verruca
+225	0	Via Vicenza
+404	0	Via Vigilio Inama
+264	0	Via Villa Belfonte
+73	0	Via Villa Maria
+467	0	Via Villa Parolari
+47	0	Via Vittime delle Foibe
+546	0	Via Vittorio Alfieri
+491	0	Via Vittorio Marchesoni
+4	0	Via Vittorio Veneto
+246	0	Via Vittorio de Riccabona
+296	0	Via Zara
+436	0	Via Zita Lorenzi
+227	0	Via Znojmo
+396	0	Via ai Bolleri
+194	0	Via ai Camilastri
+242	0	Via ai Casoti
+158	0	Via al Bosco della Città
+442	0	Via al Castel di San Rocco
+470	0	Via al Castellér
+447	0	Via al Desert
+77	0	Via al Maso Frachetti
+82	0	Via al Maso Garbini
+33	0	Via al Maso Librar
+255	0	Via al Maso Paganin
+199	0	Via al Maso Specchio
+478	0	Via al Pèz
+268	0	Via al Riparo Gaban
+75	0	Via al Torrione
+118	0	Via al Vascon
+198	0	Via al maso Pezani
+306	0	Via alla Busa
+245	0	Via alla Cascata
+204	0	Via alla Cros
+380	0	Via alla Formigheta
+106	0	Via alla Pelegrina
+40	0	Via alla Val
+223	0	Via alla Veduta
+427	0	Via alle Campanelle
+287	0	Via alle Coste
+365	0	Via alle Gemelle
+419	0	Via alle Volpare
+312	0	Via beato Lodovico Pavoni
+123	0	Via cardinale Bernardo Clesio
+407	0	Via cardinale Cristoforo Madruzzo
+540	0	Via cardinale Giovanni Gerolamo Morone
+469	0	Via córta
+117	0	Via degli Alberti Poja
+324	0	Via degli Altenburger
+269	0	Via degli Olivi
+586	0	Via degli Orti
+290	0	Via dei Bergamini
+86	0	Via dei Bòlner
+228	0	Via dei Camerli
+152	0	Via dei Cappuccini
+328	0	Via dei Carli
+408	0	Via dei Castori
+332	0	Via dei Colli
+386	0	Via dei Consolati
+149	0	Via dei Ferrovieri
+116	0	Via dei Giardini
+107	0	Via dei Masetti
+426	0	Via dei Michei
+138	0	Via dei Mille
+568	0	Via dei Molini
+171	0	Via dei Muredei
+95	0	Via dei Paho
+522	0	Via dei Paradisi
+91	0	Via dei Pozati
+369	0	Via dei Pradestei
+96	0	Via dei Rivi
+373	0	Via dei Ronchi
+79	0	Via dei Solteri
+463	0	Via dei Tessadri
+260	0	Via dei Valóni
+325	0	Via dei Ventuno
+196	0	Via del Biancospino
+22	0	Via del Bomport
+58	0	Via del Brennero
+434	0	Via del Capitel
+218	0	Via del Commercio
+88	0	Via del Corallo
+329	0	Via del Crocefisso
+431	0	Via del Dos
+361	0	Via del Forte
+262	0	Via del Giuditi
+212	0	Via del Lavaron
+244	0	Via del Maso Smalz
+256	0	Via del Mónt de sóra
+200	0	Via del Mónt de sóto
+240	0	Via del Nespolar
+415	0	Via del Pioppeto
+177	0	Via del Ponte
+250	0	Via del Rafaèi
+553	0	Via del Senter
+15	0	Via del Travai
+114	0	Via del Villaggio Satellite
+166	0	Via del dos de la polenta
+385	0	Via dell&apos;Albera
+464	0	Via dell&apos;Ancona
+233	0	Via dell&apos;Asilo
+409	0	Via dell&apos;Impresa
+401	0	Via della Ca&apos; dei Gai
+350	0	Via della Canova
+52	0	Via della Cereria
+53	0	Via della Cervara
+490	0	Via della Collina
+173	0	Via della Croce
+263	0	Via della Grotta
+208	0	Via della Loggetta
+352	0	Via della Malpensada
+507	0	Via della Malvasia
+616	0	Via della Mantovana
+156	0	Via della Pontara
+403	0	Via della Predara
+63	0	Via della Prepositura
+97	0	Via della Resistenza
+267	0	Via della Saluga
+181	0	Via della Selva
+334	0	Via della Spalliera
+239	0	Via della Villa
+243	0	Via della Ziverana
+309	0	Via delle Bettine
+500	0	Via delle Cave
+331	0	Via delle Costiole
+461	0	Via delle Crosare
+172	0	Via delle Ghiaie
+133	0	Via delle Laste
+475	0	Via delle Mandolare
+379	0	Via delle Marnighe
+20	0	Via delle Masere
+224	0	Via delle Missioni Africane
+72	0	Via delle Node
+582	0	Via delle Orfane
+354	0	Via delle Scuole
+234	0	Via delle Tabarelle
+536	0	Via di Briamasco
+293	0	Via di Campotrentino
+505	0	Via di Centa
+305	0	Via di Costa San Nicolò
+165	0	Via di Lanciatesa
+330	0	Via di Maderno
+435	0	Via di Madonna Bianca
+35	0	Via di Melta
+78	0	Via di Moià
+147	0	Via di Nicodemo
+135	0	Via di Pietrastretta
+132	0	Via di Pradiscola
+370	0	Via di San Fabiano
+432	0	Via di San Sebastiano
+104	0	Via di Stella di Man
+105	0	Via di Zell
+474	0	Via don Lorenzo Guetti
+41	0	Via don Mansueto Mazzonelli
+364	0	Via generale Giacomo Medici
+539	0	Via generale Guglielmo Pecori Giraldi
+247	0	Via la Clarina
+485	0	Via monsignor Celestino Endrici
+141	0	Via padre Benedetto Bonelli
+236	0	Via padre Eusebio Chini
+253	0	Via per Bedól
+19	0	Via per Belvedere
+81	0	Via per Campél
+214	0	Via per Chiogna
+189	0	Via per Cognola
+230	0	Via per Pila
+378	0	Via per Tavernaro
+229	0	Via per Villamontagna
+84	0	Via per l&apos;Osservatorio
+211	0	Via professore Giacomo Roberti
+124	0	Via senatore Carlo Esterle
+45	0	Viale Nepomuceno Bolognini
+558	0	Viale Rovereto
+134	0	Viale Trieste
+29	0	Viale Verona
+363	0	Viale degli Olmi
+390	0	Viale dei Tigli
+388	0	Viale delle Robinie
+311	0	Vicolo Dallapiccola
+109	0	Vicolo San Martino
+600	0	Vicolo Santa Maria Maddalena
+168	0	Vicolo al nuoto
+327	0	Vicolo alla Corte
+599	0	Vicolo del Liceo
+498	0	Vicolo di Piedicastello
+6	0	Vicolo maestro Venceslao
+56	0	località Cernidor
+449	0	via Gemma de Gresti
+425	0	via dellla Resistenza
