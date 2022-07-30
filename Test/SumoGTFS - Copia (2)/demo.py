@@ -1,7 +1,10 @@
 from email.policy import default
 import os
+import string
 import sys
 import optparse
+import datetime
+from numpy import double
 
 from pandas import options
 
@@ -23,9 +26,27 @@ def get_options():
 
 def run():
     step = 0
+     
+    
     while traci.simulation.getMinExpectedNumber() > 0:
         traci.simulationStep()
-        print(step)
+
+        print(str(datetime.timedelta(seconds = double(traci.simulation.getTime())))+"   N bus: ", end="")
+        print(traci.vehicle.getIDCount())
+
+        vehicle = traci.vehicle.getIDList()
+        for i in vehicle:
+            bus = i.split('_')
+            line = bus[0]
+            depTime = bus[1]
+            route = bus[2]
+            
+            
+            print("BUS - LINE: " + str(line[1:]) + " DEPART: " + str(depTime[1:]) + " POSITION: " + str(traci.vehicle.getPosition(i)))
+
+        #print(traci.vehicle.getIDList())
+
+        #print(step)
         step+=1
 
     traci.close()
@@ -38,6 +59,9 @@ if __name__ == "__main__":
         sumoBinary = checkBinary('sumo')
     else: 
         sumoBinary = checkBinary('sumo-gui')
+    
+    
     traci.start([sumoBinary, "-c", "osm.sumocfg"])
+    
 
     run()
