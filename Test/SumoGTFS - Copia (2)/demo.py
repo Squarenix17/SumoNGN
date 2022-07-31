@@ -28,7 +28,7 @@ def get_options():
 def run():
     step = 0
      
-    
+    connectedBus = []
     while traci.simulation.getMinExpectedNumber() > 0:
         traci.simulationStep()
         
@@ -43,12 +43,12 @@ def run():
                 linee = buss[0]
                 depTimee = buss[1]
                 routee = buss[2]
-                currentBus = [str(linee[1:]), str(depTimee[1:])]
+                currentBus = [str(linee) + "_" +str(depTimee)]
                 allBus.append(currentBus)
                 #print("BUS - LINE: " + str(linee[1:]) + " DEPART: " + str(depTimee[1:]) + " POSITION: " + str(traci.vehicle.getPosition(x)))
 
-        for k in allBus:
-            print(allBus)
+        
+        print(allBus)
 
         for i in vehicle:
             bus = i.split('_')
@@ -63,12 +63,22 @@ def run():
                 if i == j:
                     continue
                 if distance <= 20:
-                    if isNear:
-                        print("The nearest buses to: Line" + str(line[1:]) + " dTime " + str(depTime[1:]))
-                        isNear = False
                     otherBus = j.split('_')
                     lineOB = otherBus[0]
                     depTimeOB = otherBus[1]
+
+                    if test.inList(str(line) + "_" +str(depTime), connectedBus) == -1:
+                        createDictionary = {str(lineOB) + "_" +str(depTimeOB):1}
+                        addBus = [str(line) + "_" +str(depTime), {str(lineOB) + "_" +str(depTimeOB):[1, str(datetime.timedelta(seconds = double(traci.simulation.getTime())))]}]
+                        connectedBus.append(addBus)
+                    elif str(lineOB) + "_" +str(depTimeOB) not in connectedBus[test.inList(str(line) + "_" +str(depTime))][1]:
+                        connectedBus[test.inList(str(line) + "_" +str(depTime))][1].
+
+
+                    if isNear:
+                        print("The nearest buses to: Line" + str(line[1:]) + " dTime " + str(depTime[1:]))
+                        isNear = False
+                    
                     print("LINE: " + str(lineOB[1:]) + " DEPART: " + str(depTimeOB[1:]) + "is " + str(distance) + "[m] distant")
         #print(traci.vehicle.getIDList())
         
