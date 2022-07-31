@@ -31,9 +31,11 @@ def run():
     
     while traci.simulation.getMinExpectedNumber() > 0:
         traci.simulationStep()
-
+        
         print(str(datetime.timedelta(seconds = double(traci.simulation.getTime())))+"   N bus: ", end="")
         print(traci.vehicle.getIDCount())
+
+        allBus = []
 
         vehicle = traci.vehicle.getIDList()
         for x in vehicle:
@@ -41,7 +43,12 @@ def run():
                 linee = buss[0]
                 depTimee = buss[1]
                 routee = buss[2]
-                print("BUS - LINE: " + str(linee[1:]) + " DEPART: " + str(depTimee[1:]) + " POSITION: " + str(traci.vehicle.getPosition(x)))
+                currentBus = [str(linee[1:]), str(depTimee[1:])]
+                allBus.append(currentBus)
+                #print("BUS - LINE: " + str(linee[1:]) + " DEPART: " + str(depTimee[1:]) + " POSITION: " + str(traci.vehicle.getPosition(x)))
+
+        for k in allBus:
+            print(allBus)
 
         for i in vehicle:
             bus = i.split('_')
@@ -64,7 +71,7 @@ def run():
                     depTimeOB = otherBus[1]
                     print("LINE: " + str(lineOB[1:]) + " DEPART: " + str(depTimeOB[1:]) + "is " + str(distance) + "[m] distant")
         #print(traci.vehicle.getIDList())
-
+        
         #print(step)
         step+=1
 
