@@ -48,7 +48,7 @@ def run():
                 #print("BUS - LINE: " + str(linee[1:]) + " DEPART: " + str(depTimee[1:]) + " POSITION: " + str(traci.vehicle.getPosition(x)))
 
         
-        print(allBus)
+        
 
         for i in vehicle:
             bus = i.split('_')
@@ -66,22 +66,30 @@ def run():
                     otherBus = j.split('_')
                     lineOB = otherBus[0]
                     depTimeOB = otherBus[1]
-
-                    if test.inList(str(line) + "_" +str(depTime), connectedBus) == -1:
+                    #print(test.inList(str(line) + "_" +str(depTime), connectedBus))
+                    if test.inList(str(line) + "_" +str(depTime), connectedBus) == None:
                         createDictionary = {str(lineOB) + "_" +str(depTimeOB):1}
-                        addBus = [str(line) + "_" +str(depTime), {str(lineOB) + "_" +str(depTimeOB):[1, str(datetime.timedelta(seconds = double(traci.simulation.getTime())))]}]
+                        addBus = [str(line) + "_" +str(depTime), [{str(lineOB) + "_" +str(depTimeOB):[str(lineOB[1:]), str(datetime.timedelta(seconds = double(traci.simulation.getTime())))]}]]
                         connectedBus.append(addBus)
-                    elif str(lineOB) + "_" +str(depTimeOB) not in connectedBus[test.inList(str(line) + "_" +str(depTime))][1]:
-                        connectedBus[test.inList(str(line) + "_" +str(depTime))][1].
+                    elif test.inDictionary(str(lineOB) + "_" +str(depTimeOB), connectedBus[test.inList(str(line) + "_" +str(depTime), connectedBus)]) == False:
+                        #connectedBus[test.inList(str(line) + "_" +str(depTime), connectedBus)].append({str(lineOB) + "_" +str(depTimeOB):[1, str(datetime.timedelta(seconds = double(traci.simulation.getTime())))]})
+
+                        print("STESSO BUS")
+                        print(str(line) + " " + str(depTime) + "    " + str(lineOB) + str(depTimeOB))
+                        print("Poszione Da aggingere: " + str(test.inList(str(line) + "_" +str(depTime), connectedBus)))
+                        dictionary = {str(lineOB) + "_" +str(depTimeOB):[str(lineOB[1:]), str(datetime.timedelta(seconds = double(traci.simulation.getTime())))]}
+                        connectedBus[test.inList(str(line) + "_" +str(depTime), connectedBus)][1].append(dictionary)
+                        print(dictionary)
+                        print(connectedBus)
 
 
-                    if isNear:
-                        print("The nearest buses to: Line" + str(line[1:]) + " dTime " + str(depTime[1:]))
-                        isNear = False
+                    # if isNear:
+                    #     print("The nearest buses to: Line" + str(line[1:]) + " dTime " + str(depTime[1:]))
+                    #     isNear = False
                     
-                    print("LINE: " + str(lineOB[1:]) + " DEPART: " + str(depTimeOB[1:]) + "is " + str(distance) + "[m] distant")
+                    # print("LINE: " + str(lineOB[1:]) + " DEPART: " + str(depTimeOB[1:]) + "is " + str(distance) + "[m] distant")
         #print(traci.vehicle.getIDList())
-        
+        #print(connectedBus)
         #print(step)
         step+=1
 
