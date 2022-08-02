@@ -69,19 +69,34 @@ def run():
                     #print(test.inList(str(line) + "_" +str(depTime), connectedBus))
                     if test.inList(str(line) + "_" +str(depTime), connectedBus) == None:
                         createDictionary = {str(lineOB) + "_" +str(depTimeOB):1}
-                        addBus = [str(line) + "_" +str(depTime), [{str(lineOB) + "_" +str(depTimeOB):[str(lineOB[1:]), str(datetime.timedelta(seconds = double(traci.simulation.getTime())))]}]]
+                        #addBus = [str(line) + "_" +str(depTime), [{str(lineOB) + "_" +str(depTimeOB):[1, str(datetime.timedelta(seconds = double(traci.simulation.getTime())))]}]]
+                        print("LISTA ASSENTE, LA CREO")
+                        addBus = [str(line) + "_" +str(depTime), {str(lineOB) + "_" +str(depTimeOB):[1, str(datetime.timedelta(seconds = double(traci.simulation.getTime())))]}]
                         connectedBus.append(addBus)
-                    elif test.inDictionary(str(lineOB) + "_" +str(depTimeOB), connectedBus[test.inList(str(line) + "_" +str(depTime), connectedBus)]) == False:
+                    elif test.inDictionary2(str(lineOB) + "_" +str(depTimeOB), connectedBus[test.inList(str(line) + "_" +str(depTime), connectedBus)]) == False:
+                        print("DIZIONARIO ASSENTE, LO CREO")
                         #connectedBus[test.inList(str(line) + "_" +str(depTime), connectedBus)].append({str(lineOB) + "_" +str(depTimeOB):[1, str(datetime.timedelta(seconds = double(traci.simulation.getTime())))]})
 
-                        print("STESSO BUS")
-                        print(str(line) + " " + str(depTime) + "    " + str(lineOB) + str(depTimeOB))
-                        print("Poszione Da aggingere: " + str(test.inList(str(line) + "_" +str(depTime), connectedBus)))
-                        dictionary = {str(lineOB) + "_" +str(depTimeOB):[str(lineOB[1:]), str(datetime.timedelta(seconds = double(traci.simulation.getTime())))]}
-                        connectedBus[test.inList(str(line) + "_" +str(depTime), connectedBus)][1].append(dictionary)
-                        print(dictionary)
-                        print(connectedBus)
+                        #print("STESSO BUS")
+                        #print(str(line) + " " + str(depTime) + "    " + str(lineOB) + str(depTimeOB))
+                        #print("Poszione Da aggingere: " + str(test.inList(str(line) + "_" +str(depTime), connectedBus)))
+                        dictionary = {str(lineOB) + "_" +str(depTimeOB):[1, str(datetime.timedelta(seconds = double(traci.simulation.getTime())))]}
+                        connectedBus[test.inList(str(line) + "_" +str(depTime), connectedBus)][1].update(dictionary)
+                        #print(dictionary)
+                        
+                    elif test.inDictionary2(str(lineOB) + "_" +str(depTimeOB), connectedBus[test.inList(str(line) + "_" +str(depTime), connectedBus)]):
+                        print("STESSO DIZIONARIO, AGGIORNO IL TEMPO")
+                        #print(str(line) + " " + str(depTime) + "    " + str(lineOB) + str(depTimeOB))
+                        #print("Posizione del Dizionario: " + str(test.dictionaryPos(str(lineOB) + "_" +str(depTimeOB), connectedBus[test.inList(str(line) + "_" +str(depTime), connectedBus)])))
+                        
+                        time = connectedBus[test.inList(str(line) + "_" +str(depTime), connectedBus)][1].get(str(lineOB) + "_" +str(depTimeOB))[0]+1
+                        dictionary = {str(lineOB) + "_" +str(depTimeOB):[time, str(datetime.timedelta(seconds = double(traci.simulation.getTime())))]}
+                        connectedBus[test.inList(str(line) + "_" +str(depTime), connectedBus)][1].update(dictionary)
+                        
+                    print(connectedBus)   
 
+
+                
 
                     # if isNear:
                     #     print("The nearest buses to: Line" + str(line[1:]) + " dTime " + str(depTime[1:]))

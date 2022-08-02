@@ -45,6 +45,17 @@ def inDictionary(otherBus, connectedBusList):
         return False
     return True
 
+def inDictionary2(otherBus, connectedBusList):
+    if otherBus in connectedBusList[1]:
+        return True
+    return False
+
+def dictionaryPos(otherBus, connectedBusList):
+    v = next((index for (index, d) in enumerate(connectedBusList[1]) if d.get(otherBus)), None)
+    if v == None:
+        return None
+    return v
+
 
 coord1 = (3.50, 8.75)
 coord2 = (7.69, 7.853)
@@ -57,16 +68,21 @@ listaB = ["d", "e"]
 
 
 
-lista2 = ["Linea+dep", [{"lconn":[1,"8:05"]}, {"aconn":[2,"8:05"]}]]
+lista2 = ["Linea+dep", {"lconn":[1,"8:05"], "aconn":[2,"8:05"], "AAA":[2,"8:05"]}]
 
 lista = [listaA, lista2]
 
-index = next((index for (index, d) in enumerate(lista2[1]) if d.get("lconn")), None)
+#index = next((index for (index, d) in enumerate(lista2[1]) if d.get("lconn")), None)
 
 
-lista[1][1].append({"Bus":[3, "5:05"]})
+lista[1][1].update({"Bus":[3, "5:05"]})
 
-print(inDictionary("aconn", lista[inList("Linea+dep", lista)]))
+print(lista[1][1].get("AAA")[0]+5)
+
+print(inDictionary2("AAAA", lista[inList("Linea+dep", lista)]))
+
+#print(inDictionary("aconn", lista[inList("Linea+dep", lista)]))
+#print(dictionaryPos("Bus", lista[inList("Linea+dep", lista)]))
 
 print(lista2)
 
