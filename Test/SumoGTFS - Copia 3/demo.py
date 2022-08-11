@@ -4,6 +4,7 @@ import string
 import sys
 import optparse
 import datetime
+import gspread
 from tokenize import cookie_re
 import test
 from numpy import double, equal
@@ -99,26 +100,31 @@ def run():
                         
                     print(connectedBus)   
                     
-                    
-                    #listBus1,listBus2,listConnTime,listTime = []
-                    #listBus1 = connectedBus[0]
-                    #listBus2 = connectedBus[1]
-                    #listConnTime = connectedBus[1.1]
-                    #listTime = connectedBus[1.2]
-                    
+                    # Esportazione Excel
+
                     #data = {'Bus 1':[connectedBus[0][0]],
                     #        'Bus 2':[dictionary],
                     #        'Orario Inc':[depTimeOB],
                     #        'Tempo conn':[depTime]
                     #       }
-                    # Esportazione Excel
-                    df = pd.DataFrame(connectedBus)
-                    dfexcel = pd.ExcelWriter('DatabaseBus.xlsx',engine='xlsxwriter')
-                    df.to_excel(dfexcel,sheet_name='rilevazione1')
-                    dfexcel.save()
-                    print(' ')
-                    print('INCROCIO BUS SALVATO SU EXCEL')
-            
+                    #df = pd.DataFrame(connectedBus)
+                    #dfexcel = pd.ExcelWriter('DatabaseBus.xlsx',engine='xlsxwriter')
+                    #df.to_excel(dfexcel,sheet_name='rilevazione1')
+                    #dfexcel.save()
+                    #print(' ')
+                    #print('INCROCIO BUS SALVATO SU EXCEL')
+
+
+                    # Esportazione Fogli
+
+                    #sa = gspread.service_account()
+                    #sh = sa.open("Test SUMO")
+                    #wks = sh.worksheet("Foglio1")
+                    #print(wks.acell('A2').value)
+                    #wks.update('A3', "Qua vanno fatti entrare i file")
+
+
+
                     # if isNear:
                     #     print("The nearest buses to: Line" + str(line[1:]) + " dTime " + str(depTime[1:]))
                     #     isNear = False
