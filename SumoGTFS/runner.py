@@ -25,7 +25,7 @@ def get_options():
     return options
 
 def run():
-
+    connectedBusNow = 0
     step = 0
     connectedBus = []
     while traci.simulation.getMinExpectedNumber() > 0:
