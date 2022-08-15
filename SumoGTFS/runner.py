@@ -17,6 +17,8 @@ if 'SUMO_HOME' in os.environ:
 else:
      sys.exit("please declare environment variable 'SUMO_HOME'")
 
+print("Apertura della GUI di SUMO")
+
 def get_options():
     opt_parser = optparse.OptionParser()
     opt_parser.add_option("--nogui", action="store_true",
@@ -45,7 +47,8 @@ def run():
             bus = i.split('_')
             line = bus[0]
             depTime = bus[1]
-
+            currentBus = str(line) + "_" +str(depTime)
+            
             for j in vehicle:
                 distance = support.getDistance(traci.vehicle.getPosition(i), traci.vehicle.getPosition(j))
 
@@ -57,35 +60,36 @@ def run():
                     lineOB = otherBus[0]
                     depTimeOB = otherBus[1]    
                     connectedBusNow = connectedBusNow + 1
-                    
+                    currentConnectedBus = str(lineOB) + "_" +str(depTimeOB)
 
                     #if the list with the main bus doesn't exist, it's created 
-                    if support.inList(str(line) + "_" +str(depTime), connectedBus) == None:
+                    if support.inList(currentBus, connectedBus) == None:
                         #print("LISTA ASSENTE, LA CREO")
-                        addBus = [str(line) + "_" +str(depTime), 
-                                    {str(lineOB) + "_" +str(depTimeOB):[1, str(datetime.timedelta(seconds = double(traci.simulation.getTime())))]}]
+                        addBus = [currentBus, 
+                                    {currentConnectedBus:[1, str(datetime.timedelta(seconds = double(traci.simulation.getTime())))]}]
                         connectedBus.append(addBus)
                     
                     #if the list exist, but the connected bus isn't in the dictionary, the dictionary is created  
-                    elif support.inDictionary(str(lineOB) + "_" +str(depTimeOB), connectedBus[support.inList(str(line) + "_" +str(depTime), connectedBus)]) == False:
+                    elif support.inDictionary(currentConnectedBus, connectedBus[support.inList(currentBus, connectedBus)]) == False:
                         #print("DIZIONARIO ASSENTE, LO CREO")
-                        addDictionary = {str(lineOB) + "_" +str(depTimeOB):[1, str(datetime.timedelta(seconds = double(traci.simulation.getTime())))]}
-                        connectedBus[support.inList(str(line) + "_" +str(depTime), connectedBus)][1].update(addDictionary)
+                        addDictionary = {currentConnectedBus:[1, str(datetime.timedelta(seconds = double(traci.simulation.getTime())))]}
+                        connectedBus[support.inList(currentBus, connectedBus)][1].update(addDictionary)
 
                     #if the list and the dictionary exist, the conncetion time is increased 
-                    elif support.inDictionary(str(lineOB) + "_" +str(depTimeOB), connectedBus[support.inList(str(line) + "_" +str(depTime), connectedBus)]):
+                    elif support.inDictionary(currentConnectedBus, connectedBus[support.inList(currentBus, connectedBus)]):
                         #print("STESSO DIZIONARIO, AGGIORNO IL TEMPO")
-                        time = connectedBus[support.inList(str(line) + "_" +str(depTime), connectedBus)][1].get(str(lineOB) + "_" +str(depTimeOB))[0]+1
-                        meatingTime = connectedBus[support.inList(str(line) + "_" +str(depTime), connectedBus)][1].get(str(lineOB) + "_" +str(depTimeOB))[1]
+                        time = connectedBus[support.inList(currentBus, connectedBus)][1].get(currentConnectedBus)[0]+1
+                        meatingTime = connectedBus[support.inList(currentBus, connectedBus)][1].get(currentConnectedBus)[1]
                         
-                        addDictionary = {str(lineOB) + "_" +str(depTimeOB):[time, meatingTime]}
-                        connectedBus[support.inList(str(line) + "_" +str(depTime), connectedBus)][1].update(addDictionary)
+                        addDictionary = {currentConnectedBus:[time, meatingTime]}
+                        connectedBus[support.inList(currentBus, connectedBus)][1].update(addDictionary)
                     #print(connectedBus)
         
-        if connectedBus != [] and step >= 3600:
+        #update the spreadsheets every 30 min
+        if connectedBus != [] and step >= 1800:
             gSheetsManager.updateSheet(connectedBus)
             step = 1         
-        elif step >= 3600:
+        elif step >= 1800:
             step = 1
         else:
             step +=1

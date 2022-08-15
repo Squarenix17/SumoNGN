@@ -1,6 +1,8 @@
 import gspread
 import webbrowser
 
+
+
 def next_available_row(worksheet):
     str_list = list(filter(None, worksheet.col_values(1)))
     return str(len(str_list)+1)
@@ -40,9 +42,12 @@ def updateSheet(busList):
 
 
 sa = gspread.service_account("token.json")
-print(sa)
+print("Apertura Foglio di Calcolo in Corso!")
+#print(sa)
 
-sh = sa.open("Sumo Test")
+sh = sa.open("Sumo Data")
 wks = sh.worksheet("1")
 webbrowser.open(sh.url)
-wks.delete_rows(2, next_available_row(wks))
+range =  "A2:D" + str(next_available_row(wks))
+wks.batch_clear([range])
+#wks.delete_rows(2, next_available_row(wks))
