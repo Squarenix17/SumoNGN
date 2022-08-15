@@ -46,7 +46,9 @@ print("Apertura Foglio di Calcolo in Corso!")
 #print(sa)
 
 sh = sa.open("Sumo Data")
-wks = sh.worksheet("1")
+
+
+wks = sh.sheet1
 webbrowser.open(sh.url)
 range =  "A2:D" + str(next_available_row(wks))
 wks.batch_clear([range])
