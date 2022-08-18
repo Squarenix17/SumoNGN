@@ -30,7 +30,9 @@ La struttura del progetto si può suddividere in quattro fasi:
 # Tutorial Progetto SUMO - Come Avviare la Simulazione
 ### Introduzione:
 <p align="justify">Una volta clonata la repository nel proprio computer è possibile lanciare la simulazione presente nel progetto, realizzata in python, avviando il file runner.py presente nella cartella, una volta che sono soddisfatti i requisiti necessari.</p>
+
 ### Requisiti:
+
 Per avviare la simulazione sopracitata è necessario rispettare i seguenti requisiti:
 - Sumo (https://sumo.dlr.de/docs/Installing/index.html)
 - Python 3.X (https://www.python.org/downloads/)
