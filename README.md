@@ -17,7 +17,7 @@ Fabrizio Granelli
   - [Google Sheet](https://github.com/Squarenix17/SumoNGN/blob/main/README.md#google-sheet)
 - [Tutorial Progetto SUMO - Come Ricreare la Simulazione](https://github.com/Squarenix17/SumoNGN/blob/main/README.md#tutorial-progetto-sumo---come-ricreare-la-simulazione)
   - [OSM Web Wizard](https://github.com/Squarenix17/SumoNGN/blob/main/README.md#osm-web-wizard)
-    - [Requisiti](https://github.com/Squarenix17/SumoNGN/blob/main/README.md#aggiornamento-api)
+    - [Requisiti DA AGGIUNGERE LINK]
   - [Generazione ed esecuzione dello scenario](https://github.com/Squarenix17/SumoNGN/blob/main/README.md#generazione-ed-esecuzione-dello-scenario)
   - [GTFS](https://github.com/Squarenix17/SumoNGN/blob/main/README.md#gtfs)
     - [Calcolo percorso più breve](https://github.com/Squarenix17/SumoNGN/blob/main/README.md#calcolo-percorso-pi%C3%B9-breve)
