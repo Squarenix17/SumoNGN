@@ -11,11 +11,11 @@ Fabrizio Granelli
 
 # Introduzione
 
-![app](SumoNGN/images/app.png)
+![app](/image/app.png)
 
 <div style="text-align: justify">Il progetto realizzato permette di ottenere un riscontro sulle interconnessioni degli autobus della città di Trento, fornisce il numero di incroci, l’orario di incrocio e il tempo di connessione tra due bus che si incrociano in un area di diametro 20 metri.
 
-![bus](/images/bus.png)
+![bus](/image/bus.png)
 
 
 La struttura del progetto si può suddividere in quattro fasi:
@@ -24,7 +24,7 @@ Ricerca e mappatura dati GTFS sul Network
 Elaborazione dei dati con Python e TraCI
 Esportazione dei risultati su Google Sheet
 
-![struttura](/images/struttura.png)
+![struttura](/image/struttura.png)
 
 
 
@@ -47,77 +47,77 @@ Installare Python ed i moduli utilizzando PIP, il package installer di Python pe
 
 Dalla console per sviluppatori di google (https://console.developers.google.com/) è necessario creare un nuovo progetto, cliccando nel menù a tendina a destra della scritta Google Cloud
 
-![screen1](/images/screen1.png)
-![screen2](/images/screen2.png)
+![screen1](/image/screen1.png)
+![screen2](/image/screen2.png)
 
 Creare un progetto:
 
-![](/images/screen3.png)
+![](/image/screen3.png)
 
 Una volta nella dashboard del  progetto, cercare nella barra di ricerca: Google Sheets API
-![](/images/screen4.png)
-![](/images/screen5.png)
+![](/image/screen4.png)
+![](/image/screen5.png)
 
 Ed abilitare le API, fare la stessa cosa per le API di Google Drive
-![](/images/screen6.png)
+![](/image/screen6.png)
 
 Recandosi nella dashboard selezionare Service Accounts
-![](/images/screen7.png)
+![](/image/screen7.png)
 
 E creare un nuovo service account
-![](/images/screen8.png)
-![](/images/screen9.png)
+![](/image/screen8.png)
+![](/image/screen9.png)
 
 premere create and continue e selezionare il ruolo Editor:
 
-![](/images/screen10.png)
+![](/image/screen10.png)
 
 Una volta creato cliccare l’email del Service Account
 
-![](/images/screen11.png)
+![](/image/screen11.png)
 
 Recandosi in Keys
 
-![](/images/screen12.png)
+![](/image/screen12.png)
 
 è necessario creare una nuova chiave privata in json:
 
-![](/images/screen13.png)
+![](/image/screen13.png)
 
 Questo file andrà rinominato in token.json ed inserito nella cartella del programma.
 
-![](/images/screen14.png)
+![](/image/screen14.png)
 
 
 Ora sarà necessario creare il foglio di calcolo su Google docs, il quale è importante che venga rinominato Sumo Data (Con nomi differenti la simulazione non funzionerà), noi consigliamo semplicemente di creare una copia del file da noi creato: Sumo Data 
 
 Nella copia del file Sumo Data è importante condividere l’accesso con la mail del Service Account creato in precedenza: 
 
-![](/images/screen15.png)
+![](/image/screen15.png)
 
 
 Se sono stati eseguiti tutti i passaggi correttamente è ora possibile lanciare la simulazione utilizzando il file runner.py 
 
-![](/images/screen16.png)
+![](/image/screen16.png)
 
 Si aprirà in automatico il file Google Sheet Sumo Data
 
-![](/images/screen17.png)
+![](/image/screen17.png)
 
 e per far partire la simulazione sarà necessario premere sulla freccia verde Run
 
-![](/images/screen18.png)
+![](/image/screen18.png)
 
 per velocizzare la simulazione suggeriamo di ridurre il Delay a 0 e impostare la visualizzazione della mappa in faster standard
 
-![](/images/screen19.png)
+![](/image/screen19.png)
 
 si apre anche la finestra dello script python che contiene:
 Orario
 Numero bus presenti sulla mappa
 Numero di bus connessi tra loro
 
-![](/images/screen20.png)
+![](/image/screen20.png)
 
 e man mano che il programma rileva le connessioni tra i bus le trascriverà sul file Google Sheet indicando 
 Nome del bus principale
@@ -125,7 +125,7 @@ Nome del bus che viene incontrato
 Tempo per il quale rimangono connessi
 Orario in cui avviene l’incrocio
 
-![](/images/screen21.png)
+![](/image/screen21.png)
 
 L’aggiornamento sul foglio di calcolo avviene ogni 1800 secondi (30 minuti) trascorsi all’interno della simulazione.</div>
 
