@@ -1,3 +1,6 @@
+# token
+token.json
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
@@ -152,8 +155,6 @@ dmypy.json
 # Cython debug symbols
 cython_debug/
 
-#token
-token.json
 
 # PyCharm
 #  JetBrains specific template is maintained in a separate JetBrains.gitignore that can
