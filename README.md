@@ -131,10 +131,10 @@ L’aggiornamento sul foglio di calcolo avviene ogni 1800 secondi (30 minuti) tr
 
 # Tutorial Progetto SUMO - Come Ricreare la Simulazione
 La creazione della simulazione PT consiste in tre fasi:
-Requisiti di rete iniziali (OSM)
-Trovare un'origine dati per GTFS
-Mappatura dei dati GTFS sulla rete
-OSM Web Wizard
+- Requisiti di rete iniziali (OSM)
+- Trovare un'origine dati per GTFS
+- Mappatura dei dati GTFS sulla rete
+- OSM Web Wizard
 https://sumo.dlr.de/docs/Tutorials/OSMWebWizard.html
 OSM Web Wizard offre una delle soluzioni più semplici per lavorare con SUMO. Sulla base di una selezione di un estratto della mappa da openstreetmap, è possibile configurare una domanda di traffico randomizzata ed eseguire e visualizzare lo scenario nel sumo-gui. Questo tutorial ti guiderà passo dopo passo dalla selezione dell'estratto della mappa alla definizione della domanda di traffico attraverso l'esecuzione e la visualizzazione dello scenario in sumo-gui.
 Requisiti
