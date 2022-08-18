@@ -17,12 +17,11 @@ Fabrizio Granelli
 
 ![bus](/image/bus.png)
 
-
-La struttura del progetto si può suddividere in quattro fasi:
+<p align="justify">La struttura del progetto si può suddividere in quattro fasi:
 Setting e requisiti di Network iniziali 
 Ricerca e mappatura dati GTFS sul Network
 Elaborazione dei dati con Python e TraCI
-Esportazione dei risultati su Google Sheet
+Esportazione dei risultati su Google Sheet</p>
 
 ![struttura](/image/struttura.png)
 
@@ -127,7 +126,7 @@ Orario in cui avviene l’incrocio
 
 ![](/image/screen21.png)
 
-L’aggiornamento sul foglio di calcolo avviene ogni 1800 secondi (30 minuti) trascorsi all’interno della simulazione.</div>
+L’aggiornamento sul foglio di calcolo avviene ogni 1800 secondi (30 minuti) trascorsi all’interno della simulazione.
 
 # Tutorial Progetto SUMO - Come Ricreare la Simulazione
 La creazione della simulazione PT consiste in tre fasi:
