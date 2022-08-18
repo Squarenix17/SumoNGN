@@ -142,7 +142,9 @@ La creazione della simulazione PT consiste in tre fasi:
 
 https://sumo.dlr.de/docs/Tutorials/OSMWebWizard.html
 <p align="justify">OSM Web Wizard offre una delle soluzioni più semplici per lavorare con SUMO. Sulla base di una selezione di un estratto della mappa da openstreetmap, è possibile configurare una domanda di traffico randomizzata ed eseguire e visualizzare lo scenario nel sumo-gui. Questo tutorial ti guiderà passo dopo passo dalla selezione dell'estratto della mappa alla definizione della domanda di traffico attraverso l'esecuzione e la visualizzazione dello scenario in sumo-gui.
+ 
 ## Requisiti
+ 
 - Installazione di SUMO 
 - Installazione di Python con versione >= 2.7
 
