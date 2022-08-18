@@ -13,15 +13,15 @@ Fabrizio Granelli
 
 ![app](/image/app.png)
 
-<div style="text-align: justify">Il progetto realizzato permette di ottenere un riscontro sulle interconnessioni degli autobus della città di Trento, fornisce il numero di incroci, l’orario di incrocio e il tempo di connessione tra due bus che si incrociano in un area di diametro 20 metri.
+<p align="justify">Il progetto realizzato permette di ottenere un riscontro sulle interconnessioni degli autobus della città di Trento, fornisce il numero di incroci, l’orario di incrocio e il tempo di connessione tra due bus che si incrociano in un area di diametro 20 metri.
 
 ![bus](/image/bus.png)
 
-<p align="justify">La struttura del progetto si può suddividere in quattro fasi:
+La struttura del progetto si può suddividere in quattro fasi:
 Setting e requisiti di Network iniziali 
 Ricerca e mappatura dati GTFS sul Network
 Elaborazione dei dati con Python e TraCI
-Esportazione dei risultati su Google Sheet</p>
+Esportazione dei risultati su Google Sheet
 
 ![struttura](/image/struttura.png)
 
@@ -126,7 +126,7 @@ Orario in cui avviene l’incrocio
 
 ![](/image/screen21.png)
 
-L’aggiornamento sul foglio di calcolo avviene ogni 1800 secondi (30 minuti) trascorsi all’interno della simulazione.
+L’aggiornamento sul foglio di calcolo avviene ogni 1800 secondi (30 minuti) trascorsi all’interno della simulazione.</p>
 
 # Tutorial Progetto SUMO - Come Ricreare la Simulazione
 La creazione della simulazione PT consiste in tre fasi:
