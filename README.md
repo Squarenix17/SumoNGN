@@ -8,6 +8,39 @@ Fabrizio Granelli
 
 **Yousef Soliman Mekheimar - Gabriele Ughetto**
 
+# Indice
+- [Introduzione](https://github.com/Squarenix17/SumoNGN/blob/main/README.md#introduzione)
+- [Tutorial Progetto SUMO - Come Avviare la Simulazione](https://github.com/Squarenix17/SumoNGN/blob/main/README.md#tutorial-progetto-sumo---come-avviare-la-simulazione)
+  - [Introduzione](https://github.com/Squarenix17/SumoNGN/blob/main/README.md#introduzione-1)
+  - [Requisiti](https://github.com/Squarenix17/SumoNGN/blob/main/README.md#requisiti)
+  - [Procedura](https://github.com/Squarenix17/SumoNGN/blob/main/README.md#procedura)
+  - [Google Sheet](https://github.com/Squarenix17/SumoNGN/blob/main/README.md#google-sheet)
+- [Tutorial Progetto SUMO - Come Ricreare la Simulazione](https://github.com/Squarenix17/SumoNGN/blob/main/README.md#tutorial-progetto-sumo---come-ricreare-la-simulazione)
+  - [OSM Web Wizard](https://github.com/Squarenix17/SumoNGN/blob/main/README.md#osm-web-wizard)
+    - [Requisiti DA AGGIUNGERE LINK]
+  - [Generazione ed esecuzione dello scenario](https://github.com/Squarenix17/SumoNGN/blob/main/README.md#generazione-ed-esecuzione-dello-scenario)
+  - [GTFS](https://github.com/Squarenix17/SumoNGN/blob/main/README.md#gtfs)
+    - [Calcolo percorso più breve](https://github.com/Squarenix17/SumoNGN/blob/main/README.md#calcolo-percorso-pi%C3%B9-breve)
+    - [Percorso da OSM](https://github.com/Squarenix17/SumoNGN/blob/main/README.md#percorso-da-osm)
+  - [Traci](https://github.com/Squarenix17/SumoNGN/blob/main/README.md#traci)
+    - [Utilizzo di TraCI](https://github.com/Squarenix17/SumoNGN/blob/main/README.md#utilizzo-di-traci)
+    - [TraCI Protocol](https://github.com/Squarenix17/SumoNGN/blob/main/README.md#traci-protocol)
+    - [TraCI - Messaggio TCP](https://github.com/Squarenix17/SumoNGN/blob/main/README.md#traci---messaggio-tcp)
+    - [Interfacciare TraCI con Python](https://github.com/Squarenix17/SumoNGN/blob/main/README.md#interfacciare-traci-con-python)
+  - [Google Sheet](https://github.com/Squarenix17/SumoNGN/blob/main/README.md#google-sheet-1)
+- [Descrizione Codice](https://github.com/Squarenix17/SumoNGN/blob/main/README.md#descrizione-codice)
+  - [Introduzione](https://github.com/Squarenix17/SumoNGN/blob/main/README.md#introduzione-2)
+  - [File runner.py](https://github.com/Squarenix17/SumoNGN/blob/main/README.md#file-runnerpy)
+  - [File support.py](https://github.com/Squarenix17/SumoNGN/blob/main/README.md#file-supportpy)
+  - [File gSeetsManager.py](https://github.com/Squarenix17/SumoNGN/blob/main/README.md#file-gseetsmanagerpy)
+  - [File osm.sumocfg](https://github.com/Squarenix17/SumoNGN/blob/main/README.md#file--osmsumocfg)
+- [Problematiche](https://github.com/Squarenix17/SumoNGN/blob/main/README.md#problematiche)
+  - [Mappa con connessioni imprecise o interrotte](https://github.com/Squarenix17/SumoNGN/blob/main/README.md#mappa-con-connessioni-imprecise-o-interrotte)
+  - [Simulazione pesante](https://github.com/Squarenix17/SumoNGN/blob/main/README.md#simulazione-pesante)
+  - [Modifica del file *gtfs_publictransport.rou.xml*](https://github.com/Squarenix17/SumoNGN/blob/main/README.md#modifica-del-file-gtfs_publictransportrouxml)
+  - [Aggiornamento API](https://github.com/Squarenix17/SumoNGN/blob/main/README.md#aggiornamento-api)
+
+
 
 # Introduzione
 
@@ -143,8 +176,9 @@ La creazione della simulazione PT consiste in tre fasi:
 https://sumo.dlr.de/docs/Tutorials/OSMWebWizard.html
 <p align="justify">OSM Web Wizard offre una delle soluzioni più semplici per lavorare con SUMO. Sulla base di una selezione di un estratto della mappa da openstreetmap, è possibile configurare una domanda di traffico randomizzata ed eseguire e visualizzare lo scenario nel sumo-gui. Questo tutorial ti guiderà passo dopo passo dalla selezione dell'estratto della mappa alla definizione della domanda di traffico attraverso l'esecuzione e la visualizzazione dello scenario in sumo-gui.
  
-## Requisiti
- 
+
+### Requisiti
+
 - Installazione di SUMO 
 - Installazione di Python con versione >= 2.7
 
