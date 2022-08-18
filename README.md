@@ -44,7 +44,7 @@ Fabrizio Granelli
 
 # Introduzione
 
-<img src="/image/app.png" width=50% height=50%>
+<img src="/image/app.png">
 
 <p align="justify">Il progetto realizzato permette di ottenere un riscontro sulle interconnessioni degli autobus della città di Trento, fornisce il numero di incroci, l’orario di incrocio e il tempo di connessione tra due bus che si incrociano in un area di diametro 20 metri.</p>
 
@@ -82,6 +82,7 @@ Installare Python ed i moduli utilizzando PIP, il package installer di Python pe
 ## Google Sheet:
 
 <p align="justify">Dalla [console per sviluppatori di google](https://console.developers.google.com/) è necessario creare un nuovo progetto, cliccando nel menù a tendina a destra della scritta Google Cloud
+
 
 <img src="/image/screen1.png" width=500>
 
@@ -198,13 +199,13 @@ Per avviare OSM Web wizard è sufficiente invocare il seguente comando:
 
 <p align="justify">Per gli utenti Windows è possibile avviarlo facendo clic su Tutti i programmi -> SUMO -> OSM Web Wizard. Una volta eseguito lo script, dovrebbe aprirsi una pagina web che mostra un estratto della mappa del centro di Berlino.
 
-<img src="/image/screen22.png" width=500>
+<img src="/image/screen22.png">
 
 <p align="justify">Ora è possibile selezionare l'area effettiva per la quale si desidera generare lo scenario di simulazione. La selezione dell'area viene attivata facendo clic sulla casella di controllo Select Area nel pannello blu sul lato destro della mappa.
 
 Questa l’area della città di Trento selezionata:
 
-<img src="/image/screen23.png" width=500>
+<img src="/image/screen23.png">
 
 <p align="justify">Attenzione: se l'estratto della mappa copre un'area molto ampia, la simulazione potrebbe diventare lenta o addirittura non rispondere.
 S<p align="justify">UMO supporta diversi mezzi di trasporto. Nel pannello di generazione della domanda è possibile attivare/disattivare le singole modalità di trasporto facendo clic sulle caselle di controllo corrispondenti.
