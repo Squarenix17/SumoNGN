@@ -132,21 +132,6 @@ e man mano che il programma rileva le connessioni tra i bus le trascriverà sul 
 <p align="justify">L’aggiornamento sul foglio di calcolo avviene ogni 1800 secondi (30 minuti) trascorsi all’interno della simulazione.</p>
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 # Tutorial Progetto SUMO - Come Ricreare la Simulazione
 La creazione della simulazione PT consiste in tre fasi:
 - Requisiti di rete iniziali (OSM)
@@ -169,16 +154,22 @@ Per avviare OSM Web wizard è sufficiente invocare il seguente comando:
 
 <p align="justify">Per gli utenti Windows è possibile avviarlo facendo clic su Tutti i programmi -> SUMO -> OSM Web Wizard. Una volta eseguito lo script, dovrebbe aprirsi una pagina web che mostra un estratto della mappa del centro di Berlino.
 
+![](/image/screen22.png)
+
 <p align="justify">Ora è possibile selezionare l'area effettiva per la quale si desidera generare lo scenario di simulazione. La selezione dell'area viene attivata facendo clic sulla casella di controllo Select Area nel pannello blu sul lato destro della mappa.
 
 Questa l’area della città di Trento selezionata:
+
+![](/image/screen23.png)
 
 <p align="justify">Attenzione: se l'estratto della mappa copre un'area molto ampia, la simulazione potrebbe diventare lenta o addirittura non rispondere.
 S<p align="justify">UMO supporta diversi mezzi di trasporto. Nel pannello di generazione della domanda è possibile attivare/disattivare le singole modalità di trasporto facendo clic sulle caselle di controllo corrispondenti.
 <p align="justify">Nel nostro progetto abbiamo incluso esclusivamente Bus come mezzi di trasporto
 
-Generazione ed esecuzione dello scenario
+## Generazione ed esecuzione dello scenario
 <p align="justify">Lo scenario completo verrà generato automaticamente dopo aver fatto clic su Generate scenario nel pannello di controllo. Una volta terminato il processo di generazione dello scenario, si avvia sumo-gui ed è possibile avviare la simulazione premendo il pulsante Play.
+
+![](/image/screen24.png)
 
 ## GTFS
 https://sumo.dlr.de/docs/Tutorials/GTFS.html 
@@ -220,7 +211,7 @@ L'output di vtypes genera definizioni molto semplici del tipo di veicolo per le 
 
 ```sumo-gui -n osm.net.xml --additional pt_vtypes.xml,gtfs_publictransport.add.xml,gtfs_publictransport.rou.xml```
 
-##Percorso da OSM
+## Percorso da OSM
 <p align="justify">In questo caso, il percorso per ogni veicolo è preso da OSM. Quando abbiamo importato la rete con lo strumento osmWebWizard, abilitiamo l'opzione di "import public transport", che genera automaticamente il file "osm_ptlines.xml" con le linee di trasporto pubblico.
 
 La chiamata è:
@@ -251,14 +242,17 @@ https://sumo.dlr.de/docs/TraCI/Protocol.html
 <p align="justify">TraCI utilizza un'architettura client/server basata su TCP per fornire l'accesso a sumo. In tal modo, sumo funge da server che viene avviato con opzioni aggiuntive della riga di comando: --remote-port <INT> dove <INT> è la porta su cui sumo ascolterà le connessioni in entrata.
 <p align="justify">Quando TraCI viene avviato utilizzando remote-port, sumo prepara la simulazione ed attende che tutte le applicazioni esterne si colleghino. L’esecuzione di sumo prosegue fino a che il client non richiede la fine della simulazione.
 
-### TraCI Protocol
+## TraCI Protocol
 Dopo aver avviato sumo i client si connettono a instaurando una connessione TCP alla porta designata.
+
+![](/image/screen25.png)
 
 <p align="justify">Una volta avviata la simulazione il client invia dei comandi a sumo per controllare lo stato della simulazione, questi comandi possono influenzare il comportamento dei veicoli o possono richiedere dei dettagli sulla simulazione. Sumo risponde singolarmente a ciascun comando. 
 <p align="justify">La simulazione procederà solamente una volta che tutti i comandi del client avranno ricevuto risposta. Il client può anche mettere fine alla simulazione utilizzando l’apposito comando di chiusura (https://sumo.dlr.de/docs/TraCI/Control-related_commands.html#command_0x7f_close) . La simulazione terminerà alla chiusura del client. 
 
+![](/image/screen26.png)
 
-### TraCI - Messaggio TCP
+## TraCI - Messaggio TCP
 <p align="justify">Il messaggio TCP è un raccoglitore di comandi o risultati, ogni messaggio pertanto è costituito da un’intestazione che fornisce la sua dimensione complessiva e un insieme di comandi inseriti dietro ad esso. La lunghezza e l'identificatore di ciascun comando sono posto davanti al comando. Esempio:
  0                 7 8               15
 +--------------------------------------+
