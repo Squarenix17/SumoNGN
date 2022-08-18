@@ -32,10 +32,10 @@ La struttura del progetto si può suddividere in quattro fasi:
 ### Requisiti:
 
 Per avviare la simulazione sopracitata è necessario rispettare i seguenti requisiti:
-- Sumo (https://sumo.dlr.de/docs/Installing/index.html)
-- Python 3.X (https://www.python.org/downloads/)
+- [Sumo](https://sumo.dlr.de/docs/Installing/index.html)
+- [Python 3.X](https://www.python.org/downloads/)
 - Tool di python necessari: Pandas, gspread 
-- Account Developer su Google (https://developers.google.com/)
+- Account [Developer su Google](https://developers.google.com/)
 
 ### Procedura:
 
@@ -47,7 +47,7 @@ Installare Python ed i moduli utilizzando PIP, il package installer di Python pe
 
 ### Google Sheet:
 
-<p align="justify">Dalla console per sviluppatori di google (https://console.developers.google.com/) è necessario creare un nuovo progetto, cliccando nel menù a tendina a destra della scritta Google Cloud
+<p align="justify">Dalla [console per sviluppatori di google](https://console.developers.google.com/) è necessario creare un nuovo progetto, cliccando nel menù a tendina a destra della scritta Google Cloud
 
 ![screen1](/image/screen1.png)
 ![screen2](/image/screen2.png)
@@ -201,7 +201,7 @@ In questo caso, il percorso per i bus sarà definito trovando il percorso più v
 
 ```python gtfs2pt.py -n osm.net.xml --gtfs TT-GTFS.zip --date 20220715 --modes bus --vtype-output pt_vtypes.xml```
 
-<p align="justify">Consigliamo di copiare i tre file: gtfs2fcd.py, gtfs2osm.py e gtfs2pt.py presenti nella repositoriy ed inserirli nella cartella del proprio progetto dove sono presenti i file ottenuti tramite il tool osmWebWizard. (https://sumo.dlr.de/docs/Tools/Import/GTFS.html) 
+<p align="justify">Consigliamo di copiare i tre file: gtfs2fcd.py, gtfs2osm.py e gtfs2pt.py presenti nella repositoriy ed inserirli nella cartella del proprio progetto dove sono presenti i file ottenuti tramite il tool [osmWebWizard](https://sumo.dlr.de/docs/Tools/Import/GTFS.html).
 
 Lo script viene eseguito per circa cinque minuti e genera diverse sottodirectory ma alla fine fornisce tre file di output:
 
@@ -250,7 +250,7 @@ Dopo aver avviato sumo i client si connettono a instaurando una connessione TCP 
 ![](/image/screen25.png)
 
 <p align="justify">Una volta avviata la simulazione il client invia dei comandi a sumo per controllare lo stato della simulazione, questi comandi possono influenzare il comportamento dei veicoli o possono richiedere dei dettagli sulla simulazione. Sumo risponde singolarmente a ciascun comando. 
-<p align="justify">La simulazione procederà solamente una volta che tutti i comandi del client avranno ricevuto risposta. Il client può anche mettere fine alla simulazione utilizzando l’apposito comando di chiusura (https://sumo.dlr.de/docs/TraCI/Control-related_commands.html#command_0x7f_close) . La simulazione terminerà alla chiusura del client. 
+<p align="justify">La simulazione procederà solamente una volta che tutti i comandi del client avranno ricevuto risposta. Il client può anche mettere fine alla simulazione utilizzando l’apposito [comando di chiusura](https://sumo.dlr.de/docs/TraCI/Control-related_commands.html#command_0x7f_close) . La simulazione terminerà alla chiusura del client. 
 
 ![](/image/screen26.png)
 
@@ -267,9 +267,9 @@ Dopo aver avviato sumo i client si connettono a instaurando una connessione TCP 
 <p align="justify">Sumo mette a disposizione un package presente nella sezione tools/traci, il quale consente di interagire con la simulazione utilizzando python.
 
 ### Interfacciare TraCI con Python
-Le funzioni spiegate in modo dettagliato si possono osservare nella documentazione ufficiale (https://sumo.dlr.de/pydoc/traci.html)
+Le funzioni spiegate in modo dettagliato si possono osservare nella [documentazione ufficiale](https://sumo.dlr.de/pydoc/traci.html)
 
-Al fine di comprendere meglio come interfacciare TraCI con Python rimandiamo alla documentazione ufficiale (https://sumo.dlr.de/docs/TraCI/Interfacing_TraCI_from_Python.html)
+Al fine di comprendere meglio come interfacciare TraCI con Python rimandiamo alla [documentazione ufficiale](https://sumo.dlr.de/docs/TraCI/Interfacing_TraCI_from_Python.html)
 Per utilizzare traci in python, una volta settate correttamente le variabili d’ambiente, è sufficiente utilizzare il comando import traci
 ### Google Sheet
 Per connettere lo script a un file su Google Sheet bisogna andare sulla console per sviluppatori di google (https://console.developers.google.com/) e creare un nuovo progetto, cliccando nel menù a tendina a destra della scritta Google Cloud
@@ -377,7 +377,7 @@ from pandas import options
 from sumolib import checkBinary
 ```
 
-In accordo con la documentazione [ufficiale](https://sumo.dlr.de/docs/TraCI/Interfacing_TraCI_from_Python.html), è consigliato introdurre una struttura condizionale che restituisce un errore qualora non fosse impostata correttamente la variabile d’ambiente *SUMO_HOME*.
+In accordo con la [documentazione ufficiale](https://sumo.dlr.de/docs/TraCI/Interfacing_TraCI_from_Python.html), è consigliato introdurre una struttura condizionale che restituisce un errore qualora non fosse impostata correttamente la variabile d’ambiente *SUMO_HOME*.
 ```python
 if 'SUMO_HOME' in os.environ:
      tools = os.path.join(os.environ['SUMO_HOME'], 'tools')
