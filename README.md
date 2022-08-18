@@ -13,23 +13,23 @@ Fabrizio Granelli
 
 ![app](/image/app.png)
 
-<p align="justify">Il progetto realizzato permette di ottenere un riscontro sulle interconnessioni degli autobus della città di Trento, fornisce il numero di incroci, l’orario di incrocio e il tempo di connessione tra due bus che si incrociano in un area di diametro 20 metri.
+<p align="justify">Il progetto realizzato permette di ottenere un riscontro sulle interconnessioni degli autobus della città di Trento, fornisce il numero di incroci, l’orario di incrocio e il tempo di connessione tra due bus che si incrociano in un area di diametro 20 metri.</p>
 
 ![bus](/image/bus.png)
 
 La struttura del progetto si può suddividere in quattro fasi:
-Setting e requisiti di Network iniziali 
-Ricerca e mappatura dati GTFS sul Network
-Elaborazione dei dati con Python e TraCI
-Esportazione dei risultati su Google Sheet
+- Setting e requisiti di Network iniziali 
+- Ricerca e mappatura dati GTFS sul Network
+- Elaborazione dei dati con Python e TraCI
+- Esportazione dei risultati su Google Sheet
 
 ![struttura](/image/struttura.png)
 
 
 
 # Tutorial Progetto SUMO - Come Avviare la Simulazione
-Introduzione:
-Una volta clonata la repository nel proprio computer è possibile lanciare la simulazione presente nel progetto, realizzata in python, avviando il file runner.py presente nella cartella, una volta che sono soddisfatti i requisiti necessari.
+### Introduzione:
+<p align="justify">Una volta clonata la repository nel proprio computer è possibile lanciare la simulazione presente nel progetto, realizzata in python, avviando il file runner.py presente nella cartella, una volta che sono soddisfatti i requisiti necessari.</p>
 ### Requisiti:
 Per avviare la simulazione sopracitata è necessario rispettare i seguenti requisiti:
 - Sumo (https://sumo.dlr.de/docs/Installing/index.html)
