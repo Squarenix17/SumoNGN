@@ -1,40 +1,19 @@
-### Progetto SUMO
+# Progetto SUMO
 ## Next Generation Networks 
-
-
-
-
 
 Docente del corso:
 
 Fabrizio Granelli 
 
 
-Yousef Soliman Mekheimar - Gabriele Ughetto
-
-  
+**Yousef Soliman Mekheimar - Gabriele Ughetto**
 
 
+# Introduzione
 
-INDICE
-PROGETTO SUMO	3
-Introduzione	3
-Tutorial Progetto SUMO - Come Avviare la Simulazione	4
-Tutorial Progetto SUMO - Come Ricreare la Simulazione	14
-OSM Web Wizard	14
-Requisiti	14
-Generazione ed esecuzione dello scenario	16
-GTFS	16
-Calcolo percorso più breve	17
-Percorso da OSM	18
-Traci	19
-Google Sheet	21
-Descrizione Codice	31
-Criticità/problematiche riscontrate	38
+![](/images/bus.png)
 
 
-PROGETTO SUMO
-Introduzione
 Il progetto realizzato permette di ottenere un riscontro sulle interconnessioni degli autobus della città di Trento, fornisce il numero di incroci, l’orario di incrocio e il tempo di connessione tra due bus che si incrociano in un area di diametro 20 metri.
 
 
