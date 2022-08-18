@@ -11,11 +11,11 @@ Fabrizio Granelli
 
 # Introduzione
 
-![app](/image/app.png)
+<img src="/image/app.png" width=50% height=50%>
 
 <p align="justify">Il progetto realizzato permette di ottenere un riscontro sulle interconnessioni degli autobus della città di Trento, fornisce il numero di incroci, l’orario di incrocio e il tempo di connessione tra due bus che si incrociano in un area di diametro 20 metri.</p>
 
-![bus](/image/bus.png)
+<img src="/image/bus.png" width=500>
 
 La struttura del progetto si può suddividere in quattro fasi:
 - Setting e requisiti di Network iniziali 
@@ -201,7 +201,7 @@ In questo caso, il percorso per i bus sarà definito trovando il percorso più v
 
 ```python gtfs2pt.py -n osm.net.xml --gtfs TT-GTFS.zip --date 20220715 --modes bus --vtype-output pt_vtypes.xml```
 
-<p align="justify">Consigliamo di copiare i tre file: gtfs2fcd.py, gtfs2osm.py e gtfs2pt.py presenti nella repositoriy ed inserirli nella cartella del proprio progetto dove sono presenti i file ottenuti tramite il tool [osmWebWizard](https://sumo.dlr.de/docs/Tools/Import/GTFS.html).
+ Consigliamo di copiare i tre file: gtfs2fcd.py, gtfs2osm.py e gtfs2pt.py presenti nella repositoriy ed inserirli nella cartella del proprio progetto dove sono presenti i file ottenuti tramite il tool [osmWebWizard](https://sumo.dlr.de/docs/Tools/Import/GTFS.html)
 
 Lo script viene eseguito per circa cinque minuti e genera diverse sottodirectory ma alla fine fornisce tre file di output:
 
@@ -353,6 +353,7 @@ e man mano che il programma rileva le connessioni tra i bus le trascriverà sul 
 - Orario in cui avviene l’incrocio
 
 ![](/image/screen21.png)
+<p align="justify">L’aggiornamento sul foglio di calcolo avviene ogni 1800 secondi (30 minuti) trascorsi all’interno della simulazione.</p>
  
 # Descrizione Codice
 ## Introduzione
@@ -606,7 +607,23 @@ Attraverso questo file è possibile configurare la simulazione impostando file a
 ```
 I file che abbiamo impiegato in input nella simulazione sono, osm.net.xml che contiene la rete stradale della città di trento. Come file addizionali invece: *pt_vtypes.xml* che contiene la tipologia di veicoli impiegati nella simulazione, *gtfs_publictransport.add.xml* contenente la lista di fermate ed i percorsi che gli autobus effettueranno durante la simulazione ed infine *gtfs_publictransport.rou.xml* il quale è responsabile del percorso che gli autobus devono seguire.
 
-<p align="justify">L’aggiornamento sul foglio di calcolo avviene ogni 1800 secondi (30 minuti) trascorsi all’interno della simulazione.</p>
+# Problematiche
+
+Durante il progetto abbiamo riscontrato alcune problematiche.
+
+## Mappa con connessioni imprecise o interrotte
+Il tool fornito da SUMO osmWebWizard, che consente di selezionare una regione geografica su Open Street Map e convertirla in una rete pronta per essere simulata, presenta delle problematiche per aree molto grandi. Abbiamo tentato gli altri metodi consigliati nella sezione [OSM](https://sumo.dlr.de/docs/Tools/Import/OSM.html) della documentazione, ma la problematica persisteva. La mappa dunque rappresentata non è totalmente fedele a quella della città di Trento e alcuni percorsi degli autobus potrebbero averne risentito con la conseguenza che il percorso simulato non rappresenterà quello reale in alcune zone.
+
+## Simulazione pesante 
+La simulazione deve coprire una zona molto vasta con numerose intersezioni, infatti nelle ore in cui sono presenti più autobus, dalle 7:00 alle 16:00 circa, il tempo di computazione che richiede ogni ciclo aumenta in maniera significativa. Al fine di non rendere ulteriormente pensante la simulazione abbiamo deciso di non implementare un traffico generato randomicamente.
+
+## Modifica del file *gtfs_publictransport.rou.xml*
+Il file gtfs_publictransport.rou.xml ottenuto dallo script *gtfs2pt.py* utilizzando il GTFS fornito da Trentino Trasporti presentava un id degli autobus poco riconoscibile, pertanto abbiamo modificato manualmente l’id di ogni bus nel seguente modo:
+
+vehicle id="lNumeroLinea_dOrarioPartenza_rNumeroRoute"
+
+## Aggiornamento API
+Durante la simulazione l’aggiornamento del foglio di calcolo non avviene ad ogni ciclo, le motivazioni di questa scelta sono due, la prima è il limite di richieste al minuto delle api google, le quali non permettono di stare al passo con l’esecuzione della simulazione. La seconda motivazione riguarda la velocità con cui viene eseguita la richiesta, TraCI infatti prima di proseguire al ciclo successivo attenderà l’avvenuta scrittura nel foglio di calcolo e il tempo di attesa per ogni chiamata è significativo. La chiamata alle API sarà eseguita una sola volta raggruppando tutte le celle da aggiornare.
  
  
 
