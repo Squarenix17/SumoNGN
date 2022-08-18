@@ -256,22 +256,9 @@ Dopo aver avviato sumo i client si connettono a instaurando una connessione TCP 
 
 ## TraCI - Messaggio TCP
 <p align="justify">Il messaggio TCP è un raccoglitore di comandi o risultati, ogni messaggio pertanto è costituito da un’intestazione che fornisce la sua dimensione complessiva e un insieme di comandi inseriti dietro ad esso. La lunghezza e l'identificatore di ciascun comando sono posto davanti al comando. Esempio:
- 0                 7 8               15
-+--------------------------------------+
-| Message Length including this header |
-+--------------------------------------+
-|      (Message Length, continued)     |
-+--------------------------------------+  \
-|     Length        |    Identifier    |  |
-+--------------------------------------+   > Command_0
-|           Command_0 content          |  |
-+--------------------------------------+  /
-                   ...
-+--------------------------------------+  \
-|     Length        |    Identifier    |  |
-+--------------------------------------+   > Command_n-1
-|          Command_n-1 content         |  |
-+--------------------------------------+  /
+
+![](/image/screen27.png)
+
 
 <p align="justify">In alcuni casi la lunghezza di un singolo comando potrebbe non essere sufficiente, visto che la lunghezza massima del comando è limitata a 255 bit, in questi casi è possibile impostare il campo della lunghezza in ubyte su zero e aggiungendo la lunghezza di un intero.
 
