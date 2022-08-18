@@ -26,10 +26,10 @@ La struttura del progetto si può suddividere in quattro fasi:
 ![struttura](/image/struttura.png)
 
 # Tutorial Progetto SUMO - Come Avviare la Simulazione
-### Introduzione:
+## Introduzione:
 <p align="justify">Una volta clonata la repository nel proprio computer è possibile lanciare la simulazione presente nel progetto, realizzata in python, avviando il file runner.py presente nella cartella, una volta che sono soddisfatti i requisiti necessari.</p>
 
-### Requisiti:
+## Requisiti:
 
 Per avviare la simulazione sopracitata è necessario rispettare i seguenti requisiti:
 - [Sumo](https://sumo.dlr.de/docs/Installing/index.html)
@@ -37,7 +37,7 @@ Per avviare la simulazione sopracitata è necessario rispettare i seguenti requi
 - Tool di python necessari: Pandas, gspread 
 - Account [Developer su Google](https://developers.google.com/)
 
-### Procedura:
+## Procedura:
 
 <p align="justify">Installare SUMO seguendo dettagliatamente la documentazione, facendo attenzione ad impostare correttamente i path nelle variabili di sistema.</p>
 
@@ -45,7 +45,7 @@ Per avviare la simulazione sopracitata è necessario rispettare i seguenti requi
 IMPORTANTE alle variabili di sistema è necessario aggiungere "/your/path/to/sumo/tools"      PYTHONPATH
 Installare Python ed i moduli utilizzando PIP, il package installer di Python per la versione che si intende utilizzare per lanciare la simulazione.</p>
 
-### Google Sheet:
+## Google Sheet:
 
 <p align="justify">Dalla [console per sviluppatori di google](https://console.developers.google.com/) è necessario creare un nuovo progetto, cliccando nel menù a tendina a destra della scritta Google Cloud
 
@@ -196,7 +196,7 @@ Per comodità rinominiamo il file zip da google_transit_urbano_tte.zip a TT-GTFS
 A seconda dei file di input disponibili, puoi scegliere tra due diversi modi per generare i percorsi.
 - Calcolo del percorso più breve
 - Percorso da OSM
-## Calcolo percorso più breve
+### Calcolo percorso più breve
 In questo caso, il percorso per i bus sarà definito trovando il percorso più veloce tra le fermate.
 
 ```python gtfs2pt.py -n osm.net.xml --gtfs TT-GTFS.zip --date 20220715 --modes bus --vtype-output pt_vtypes.xml```
@@ -213,7 +213,7 @@ L'output di vtypes genera definizioni molto semplici del tipo di veicolo per le 
 
 ```sumo-gui -n osm.net.xml --additional pt_vtypes.xml,gtfs_publictransport.add.xml,gtfs_publictransport.rou.xml```
 
-## Percorso da OSM
+### Percorso da OSM
 <p align="justify">In questo caso, il percorso per ogni veicolo è preso da OSM. Quando abbiamo importato la rete con lo strumento osmWebWizard, abilitiamo l'opzione di "import public transport", che genera automaticamente il file "osm_ptlines.xml" con le linee di trasporto pubblico.
 
 La chiamata è:
@@ -232,7 +232,7 @@ Per eseguire la chiamata della simulazione:
 
 ```sumo-gui -n osm.net.xml --additional gtfs_publictransport.add.xml --routes gtfs_publictransport.rou.xml```
 
-# Traci
+## Traci
 https://sumo.dlr.de/pydoc/sumolib.html
 https://sumo.dlr.de/docs/TraCI/Interfacing_TraCI_from_Python.htm
 https://sumo.dlr.de/docs/TraCI.html
@@ -240,11 +240,11 @@ https://sumo.dlr.de/docs/TraCI/Protocol.html
 
 <p align="justify">TraCI è l'abbreviazione di "Traffic Control Interface". Dando accesso ad una simulazione del traffico stradale in corso, permette di recuperare i valori degli oggetti simulati e di manipolarne il comportamento "on-line".
 
-## Utilizzo di TraCI
+### Utilizzo di TraCI
 <p align="justify">TraCI utilizza un'architettura client/server basata su TCP per fornire l'accesso a sumo. In tal modo, sumo funge da server che viene avviato con opzioni aggiuntive della riga di comando: --remote-port <INT> dove <INT> è la porta su cui sumo ascolterà le connessioni in entrata.
 <p align="justify">Quando TraCI viene avviato utilizzando remote-port, sumo prepara la simulazione ed attende che tutte le applicazioni esterne si colleghino. L’esecuzione di sumo prosegue fino a che il client non richiede la fine della simulazione.
 
-## TraCI Protocol
+### TraCI Protocol
 Dopo aver avviato sumo i client si connettono a instaurando una connessione TCP alla porta designata.
 
 ![](/image/screen25.png)
@@ -254,7 +254,7 @@ Dopo aver avviato sumo i client si connettono a instaurando una connessione TCP 
 
 ![](/image/screen26.png)
 
-## TraCI - Messaggio TCP
+### TraCI - Messaggio TCP
 <p align="justify">Il messaggio TCP è un raccoglitore di comandi o risultati, ogni messaggio pertanto è costituito da un’intestazione che fornisce la sua dimensione complessiva e un insieme di comandi inseriti dietro ad esso. La lunghezza e l'identificatore di ciascun comando sono posto davanti al comando. Esempio:
 
 ![](/image/screen27.png)
@@ -271,7 +271,7 @@ Le funzioni spiegate in modo dettagliato si possono osservare nella [documentazi
 
 Al fine di comprendere meglio come interfacciare TraCI con Python rimandiamo alla [documentazione ufficiale](https://sumo.dlr.de/docs/TraCI/Interfacing_TraCI_from_Python.html)
 Per utilizzare traci in python, una volta settate correttamente le variabili d’ambiente, è sufficiente utilizzare il comando import traci
-### Google Sheet
+## Google Sheet
 Per connettere lo script a un file su Google Sheet bisogna andare sulla console per sviluppatori di google (https://console.developers.google.com/) e creare un nuovo progetto, cliccando nel menù a tendina a destra della scritta Google Cloud
 
 ![screen1](/image/screen1.png)
@@ -354,7 +354,7 @@ e man mano che il programma rileva le connessioni tra i bus le trascriverà sul 
 
 ![](/image/screen21.png)
  
- # Descrizione Codice
+# Descrizione Codice
 ## Introduzione
 Il codice descritto in questa sezione funziona esclusivamente per il file *gtfs_publictransport.rou.xml* presente in questa simulazione, l’id dei veicoli è stato infatti modificato come in sequente esempio: `vehicle id="lNumeroLinea_dOrarioPartenza_rNumeroRoute”` 
 Il file di partenza ottenuto dai file GTFS l’id del veicolo era esclusivamente *NumeroRoute*
@@ -444,7 +444,7 @@ Successivamente è presente un altro for nidificato al primo, in questo caso vie
 ```
 Il secondo *if* presente verificherà che la distanza tra i due veicoli sia minore uguale a 20 metri, se così fosse, viene suddiviso anche il bus presente in *j* con lo stesso criterio del veicolo *i*.
 
-## Struttura della lista connectedBus
+### Struttura della lista connectedBus
 Nella lista *connectedBus* verranno salvati tutti i veicoli ed è organizzata nel seguente modo:
 ```python
    connctedBus=[[BusPrincipale, {BusConnesso:[TempoDiConnessione, OrarioInizioConnessione]}]]
