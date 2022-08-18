@@ -11,11 +11,11 @@ Fabrizio Granelli
 
 # Introduzione
 
-![app](images/app.png)
+![app](/images/app.png)
 
 <div style="text-align: justify">Il progetto realizzato permette di ottenere un riscontro sulle interconnessioni degli autobus della città di Trento, fornisce il numero di incroci, l’orario di incrocio e il tempo di connessione tra due bus che si incrociano in un area di diametro 20 metri.
 
-![bus](images/bus.png)
+![bus](/images/bus.png)
 
 
 La struttura del progetto si può suddividere in quattro fasi:
