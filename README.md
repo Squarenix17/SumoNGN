@@ -14,9 +14,7 @@ Fabrizio Granelli
 ![](/image/app.png)
 
 
-<div class="text-justify">
-
-Il progetto realizzato permette di ottenere un riscontro sulle interconnessioni degli autobus della città di Trento, fornisce il numero di incroci, l’orario di incrocio e il tempo di connessione tra due bus che si incrociano in un area di diametro 20 metri.
+<div class="text-justify">Il progetto realizzato permette di ottenere un riscontro sulle interconnessioni degli autobus della città di Trento, fornisce il numero di incroci, l’orario di incrocio e il tempo di connessione tra due bus che si incrociano in un area di diametro 20 metri.</div>
 
 ![](/images/bus.png)
 
@@ -25,7 +23,7 @@ La struttura del progetto si può suddividere in quattro fasi:
 Setting e requisiti di Network iniziali 
 Ricerca e mappatura dati GTFS sul Network
 Elaborazione dei dati con Python e TraCI
-Esportazione dei risultati su Google Sheet <div>
+Esportazione dei risultati su Google Sheet 
 
 
 
