@@ -56,7 +56,8 @@ La struttura del progetto si può suddividere in quattro fasi:
 - Elaborazione dei dati con Python e TraCI
 - Esportazione dei risultati su Google Sheet
 
-![struttura](/image/struttura.png)
+<img src="/image/struttura.png" width=500>
+
 
 # Tutorial Progetto SUMO - Come Avviare la Simulazione
 ## Introduzione:
@@ -82,77 +83,77 @@ Installare Python ed i moduli utilizzando PIP, il package installer di Python pe
 
 <p align="justify">Dalla [console per sviluppatori di google](https://console.developers.google.com/) è necessario creare un nuovo progetto, cliccando nel menù a tendina a destra della scritta Google Cloud
 
-![screen1](/image/screen1.png)
-![screen2](/image/screen2.png)
+<img src="/image/screen1.png" width=500>
+<img src="/image/screen2.png" width=500>
 
 Creare un progetto:
 
-![](/image/screen3.png)
+<img src="/image/screen3.png" width=500>
 
 Una volta nella dashboard del  progetto, cercare nella barra di ricerca: Google Sheets API
-![](/image/screen4.png)
-![](/image/screen5.png)
+<img src="/image/screen4.png" width=500>
+<img src="/image/screen5.png" width=500>
 
 Ed abilitare le API, fare la stessa cosa per le API di Google Drive
-![](/image/screen6.png)
+<img src="/image/screen6.png" width=500>
 
 Recandosi nella dashboard selezionare Service Accounts
-![](/image/screen7.png)
+<img src="/image/screen7.png" width=500>
 
 E creare un nuovo service account
-![](/image/screen8.png)
-![](/image/screen9.png)
+<img src="/image/screen8.png" width=500>
+<img src="/image/screen9.png" width=500>
 
 premere create and continue e selezionare il ruolo Editor:
 
-![](/image/screen10.png)
+<img src="/image/screen10.png" width=500>
 
 Una volta creato cliccare l’email del Service Account
 
-![](/image/screen11.png)
+<img src="/image/screen11.png" width=500>
 
 Recandosi in Keys
 
-![](/image/screen12.png)
+<img src="/image/screen12.png" width=500>
 
 è necessario creare una nuova chiave privata in json:
 
-![](/image/screen13.png)
+<img src="/image/screen13.png" width=500>
 
 Questo file andrà rinominato in token.json ed inserito nella cartella del programma.
 
-![](/image/screen14.png)
+<img src="/image/screen14.png" width=500>
 
 
 <p align="justify">Ora sarà necessario creare il foglio di calcolo su Google docs, il quale è importante che venga rinominato Sumo Data (Con nomi differenti la simulazione non funzionerà), noi consigliamo semplicemente di creare una copia del file da noi creato: Sumo Data 
 
 <p align="justify">Nella copia del file Sumo Data è importante condividere l’accesso con la mail del Service Account creato in precedenza: 
 
-![](/image/screen15.png)
+<img src="/image/screen15.png" width=500>
 
 
 <p align="justify">Se sono stati eseguiti tutti i passaggi correttamente è ora possibile lanciare la simulazione utilizzando il file runner.py 
 
-![](/image/screen16.png)
+<img src="/image/screen16.png" width=500>
 
 Si aprirà in automatico il file Google Sheet Sumo Data
 
-![](/image/screen17.png)
+<img src="/image/screen17.png" width=500>
 
 e per far partire la simulazione sarà necessario premere sulla freccia verde Run
 
-![](/image/screen18.png)
+<img src="/image/screen18.png" width=500>
 
 <p align="justify">per velocizzare la simulazione suggeriamo di ridurre il Delay a 0 e impostare la visualizzazione della mappa in faster standard
 
-![](/image/screen19.png)
+<img src="/image/screen19.png" width=500>
 
 si apre anche la finestra dello script python che contiene:
 - Orario
 - Numero bus presenti sulla mappa
 - Numero di bus connessi tra loro
 
-![](/image/screen20.png)
+<img src="/image/screen20.png" width=500>
 
 e man mano che il programma rileva le connessioni tra i bus le trascriverà sul file Google Sheet indicando 
 - Nome del bus principale
@@ -160,7 +161,7 @@ e man mano che il programma rileva le connessioni tra i bus le trascriverà sul 
 - Tempo per il quale rimangono connessi
 - Orario in cui avviene l’incrocio
 
-![](/image/screen21.png)
+<img src="/image/screen21.png" width=500>
 
 <p align="justify">L’aggiornamento sul foglio di calcolo avviene ogni 1800 secondi (30 minuti) trascorsi all’interno della simulazione.</p>
 
@@ -190,13 +191,13 @@ Per avviare OSM Web wizard è sufficiente invocare il seguente comando:
 
 <p align="justify">Per gli utenti Windows è possibile avviarlo facendo clic su Tutti i programmi -> SUMO -> OSM Web Wizard. Una volta eseguito lo script, dovrebbe aprirsi una pagina web che mostra un estratto della mappa del centro di Berlino.
 
-![](/image/screen22.png)
+<img src="/image/screen22.png" width=500>
 
 <p align="justify">Ora è possibile selezionare l'area effettiva per la quale si desidera generare lo scenario di simulazione. La selezione dell'area viene attivata facendo clic sulla casella di controllo Select Area nel pannello blu sul lato destro della mappa.
 
 Questa l’area della città di Trento selezionata:
 
-![](/image/screen23.png)
+<img src="/image/screen23.png" width=500>
 
 <p align="justify">Attenzione: se l'estratto della mappa copre un'area molto ampia, la simulazione potrebbe diventare lenta o addirittura non rispondere.
 S<p align="justify">UMO supporta diversi mezzi di trasporto. Nel pannello di generazione della domanda è possibile attivare/disattivare le singole modalità di trasporto facendo clic sulle caselle di controllo corrispondenti.
@@ -205,7 +206,7 @@ S<p align="justify">UMO supporta diversi mezzi di trasporto. Nel pannello di gen
 ## Generazione ed esecuzione dello scenario
 <p align="justify">Lo scenario completo verrà generato automaticamente dopo aver fatto clic su Generate scenario nel pannello di controllo. Una volta terminato il processo di generazione dello scenario, si avvia sumo-gui ed è possibile avviare la simulazione premendo il pulsante Play.
 
-![](/image/screen24.png)
+<img src="/image/scree24.png" width=500>
 
 ## GTFS
 https://sumo.dlr.de/docs/Tutorials/GTFS.html 
@@ -281,17 +282,17 @@ https://sumo.dlr.de/docs/TraCI/Protocol.html
 ### TraCI Protocol
 Dopo aver avviato sumo i client si connettono a instaurando una connessione TCP alla porta designata.
 
-![](/image/screen25.png)
+<img src="/image/screen25.png" width=500>
 
 <p align="justify">Una volta avviata la simulazione il client invia dei comandi a sumo per controllare lo stato della simulazione, questi comandi possono influenzare il comportamento dei veicoli o possono richiedere dei dettagli sulla simulazione. Sumo risponde singolarmente a ciascun comando. 
 <p align="justify">La simulazione procederà solamente una volta che tutti i comandi del client avranno ricevuto risposta. Il client può anche mettere fine alla simulazione utilizzando l’apposito [comando di chiusura](https://sumo.dlr.de/docs/TraCI/Control-related_commands.html#command_0x7f_close) . La simulazione terminerà alla chiusura del client. 
 
-![](/image/screen26.png)
+<img src="/image/screen26.png" width=500>
 
 ### TraCI - Messaggio TCP
 <p align="justify">Il messaggio TCP è un raccoglitore di comandi o risultati, ogni messaggio pertanto è costituito da un’intestazione che fornisce la sua dimensione complessiva e un insieme di comandi inseriti dietro ad esso. La lunghezza e l'identificatore di ciascun comando sono posto davanti al comando. Esempio:
 
-![](/image/screen27.png)
+<img src="/image/screen27.png" width=500>
 
 
 <p align="justify">In alcuni casi la lunghezza di un singolo comando potrebbe non essere sufficiente, visto che la lunghezza massima del comando è limitata a 255 bit, in questi casi è possibile impostare il campo della lunghezza in ubyte su zero e aggiungendo la lunghezza di un intero.
@@ -308,77 +309,77 @@ Per utilizzare traci in python, una volta settate correttamente le variabili d�
 ## Google Sheet
 Per connettere lo script a un file su Google Sheet bisogna andare sulla console per sviluppatori di google (https://console.developers.google.com/) e creare un nuovo progetto, cliccando nel menù a tendina a destra della scritta Google Cloud
 
-![screen1](/image/screen1.png)
-![screen2](/image/screen2.png)
+<img src="/image/screen1.png" width=500>
+<img src="/image/screen2.png" width=500>
 
 Creare un progetto:
 
-![](/image/screen3.png)
+<img src="/image/screen3.png" width=500>
 
 Una volta nella dashboard del  progetto, cercare nella barra di ricerca: Google Sheets API
-![](/image/screen4.png)
-![](/image/screen5.png)
+<img src="/image/screen4.png" width=500>
+<img src="/image/screen5.png" width=500>
 
 Ed abilitare le API, fare la stessa cosa per le API di Google Drive
-![](/image/screen6.png)
+<img src="/image/screen6.png" width=500>
 
 Recandosi nella dashboard selezionare Service Accounts
-![](/image/screen7.png)
+<img src="/image/screen7.png" width=500>
 
 E creare un nuovo service account
-![](/image/screen8.png)
-![](/image/screen9.png)
+<img src="/image/screen8.png" width=500>
+<img src="/image/screen9.png" width=500>
 
 premere create and continue e selezionare il ruolo Editor:
 
-![](/image/screen10.png)
+<img src="/image/screen10.png" width=500>
 
 Una volta creato cliccare l’email del Service Account
 
-![](/image/screen11.png)
+<img src="/image/screen11.png" width=500>
 
 Recandosi in Keys
 
-![](/image/screen12.png)
+<img src="/image/screen12.png" width=500>
 
 è necessario creare una nuova chiave privata in json:
 
-![](/image/screen13.png)
+<img src="/image/screen13.png" width=500>
 
 Questo file andrà rinominato in token.json ed inserito nella cartella del programma.
 
-![](/image/screen14.png)
+<img src="/image/screen14.png" width=500>
 
 
 <p align="justify">Ora sarà necessario creare il foglio di calcolo su Google docs, il quale è importante che venga rinominato Sumo Data (Con nomi differenti la simulazione non funzionerà), noi consigliamo semplicemente di creare una copia del file da noi creato: Sumo Data 
 
 <p align="justify">Nella copia del file Sumo Data è importante condividere l’accesso con la mail del Service Account creato in precedenza: 
 
-![](/image/screen15.png)
+<img src="/image/screen15.png" width=500>
 
 
 <p align="justify">Se sono stati eseguiti tutti i passaggi correttamente è ora possibile lanciare la simulazione utilizzando il file runner.py 
 
-![](/image/screen16.png)
+<img src="/image/screen16.png" width=500>
 
 Si aprirà in automatico il file Google Sheet Sumo Data
 
-![](/image/screen17.png)
+<img src="/image/screen17.png" width=500>
 
 e per far partire la simulazione sarà necessario premere sulla freccia verde Run
 
-![](/image/screen18.png)
+<img src="/image/screen18.png" width=500>
 
 <p align="justify">per velocizzare la simulazione suggeriamo di ridurre il Delay a 0 e impostare la visualizzazione della mappa in faster standard
 
-![](/image/screen19.png)
+<img src="/image/screen19.png" width=500>
 
 si apre anche la finestra dello script python che contiene:
 - Orario
 - Numero bus presenti sulla mappa
 - Numero di bus connessi tra loro
 
-![](/image/screen20.png)
+<img src="/image/screen20.png" width=500>
 
 e man mano che il programma rileva le connessioni tra i bus le trascriverà sul file Google Sheet indicando 
 - Nome del bus principale
@@ -386,7 +387,8 @@ e man mano che il programma rileva le connessioni tra i bus le trascriverà sul 
 - Tempo per il quale rimangono connessi
 - Orario in cui avviene l’incrocio
 
-![](/image/screen21.png)
+<img src="/image/screen21.png" width=500>
+  
 <p align="justify">L’aggiornamento sul foglio di calcolo avviene ogni 1800 secondi (30 minuti) trascorsi all’interno della simulazione.</p>
  
 # Descrizione Codice
