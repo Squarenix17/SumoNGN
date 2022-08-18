@@ -84,6 +84,7 @@ Installare Python ed i moduli utilizzando PIP, il package installer di Python pe
 <p align="justify">Dalla [console per sviluppatori di google](https://console.developers.google.com/) è necessario creare un nuovo progetto, cliccando nel menù a tendina a destra della scritta Google Cloud
 
 <img src="/image/screen1.png" width=500>
+
 <img src="/image/screen2.png" width=500>
 
 Creare un progetto:
@@ -91,17 +92,23 @@ Creare un progetto:
 <img src="/image/screen3.png" width=500>
 
 Una volta nella dashboard del  progetto, cercare nella barra di ricerca: Google Sheets API
+
 <img src="/image/screen4.png" width=500>
+
 <img src="/image/screen5.png" width=500>
 
 Ed abilitare le API, fare la stessa cosa per le API di Google Drive
+
 <img src="/image/screen6.png" width=500>
 
 Recandosi nella dashboard selezionare Service Accounts
+
 <img src="/image/screen7.png" width=500>
 
 E creare un nuovo service account
+
 <img src="/image/screen8.png" width=500>
+
 <img src="/image/screen9.png" width=500>
 
 premere create and continue e selezionare il ruolo Editor:
@@ -236,7 +243,7 @@ In questo caso, il percorso per i bus sarà definito trovando il percorso più v
 
 ```python gtfs2pt.py -n osm.net.xml --gtfs TT-GTFS.zip --date 20220715 --modes bus --vtype-output pt_vtypes.xml```
 
- Consigliamo di copiare i tre file: gtfs2fcd.py, gtfs2osm.py e gtfs2pt.py presenti nella repositoriy ed inserirli nella cartella del proprio progetto dove sono presenti i file ottenuti tramite il tool [osmWebWizard](https://sumo.dlr.de/docs/Tools/Import/GTFS.html)
+Consigliamo di copiare i tre file: gtfs2fcd.py, gtfs2osm.py e gtfs2pt.py presenti nella repositoriy ed inserirli nella cartella del proprio progetto dove sono presenti i file ottenuti tramite il tool [osmWebWizard](https://sumo.dlr.de/docs/Tools/Import/GTFS.html)
 
 Lo script viene eseguito per circa cinque minuti e genera diverse sottodirectory ma alla fine fornisce tre file di output:
 
@@ -310,6 +317,7 @@ Per utilizzare traci in python, una volta settate correttamente le variabili d�
 Per connettere lo script a un file su Google Sheet bisogna andare sulla console per sviluppatori di google (https://console.developers.google.com/) e creare un nuovo progetto, cliccando nel menù a tendina a destra della scritta Google Cloud
 
 <img src="/image/screen1.png" width=500>
+
 <img src="/image/screen2.png" width=500>
 
 Creare un progetto:
@@ -317,17 +325,23 @@ Creare un progetto:
 <img src="/image/screen3.png" width=500>
 
 Una volta nella dashboard del  progetto, cercare nella barra di ricerca: Google Sheets API
+
 <img src="/image/screen4.png" width=500>
+
 <img src="/image/screen5.png" width=500>
 
 Ed abilitare le API, fare la stessa cosa per le API di Google Drive
+
 <img src="/image/screen6.png" width=500>
 
 Recandosi nella dashboard selezionare Service Accounts
+
 <img src="/image/screen7.png" width=500>
 
 E creare un nuovo service account
+
 <img src="/image/screen8.png" width=500>
+
 <img src="/image/screen9.png" width=500>
 
 premere create and continue e selezionare il ruolo Editor:
