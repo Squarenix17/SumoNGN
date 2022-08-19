@@ -56,7 +56,7 @@ S<p align="justify">UMO supporta diversi mezzi di trasporto. Nel pannello di gen
 ## Generazione ed esecuzione dello scenario
 <p align="justify">Lo scenario completo verrà generato automaticamente dopo aver fatto clic su Generate scenario nel pannello di controllo. Una volta terminato il processo di generazione dello scenario, si avvia sumo-gui ed è possibile avviare la simulazione premendo il pulsante Play.
 
-<img src="/image/scree24.png" width=500>
+<img src="/image/screen24.png" width=500>
 
 ## [GTFS](https://sumo.dlr.de/docs/Tutorials/GTFS.html)
 
