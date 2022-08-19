@@ -81,7 +81,7 @@ Installare Python ed i moduli utilizzando PIP, il package installer di Python pe
 
 ## Google Sheet:
 
-<p align="justify">Dalla <a href="https://console.developers.google.com/" title="Console"> console per sviluppatori di google</a> è necessario creare un nuovo progetto, cliccando nel menù a tendina a destra della scritta Google Cloud
+<p align="justify">Dalla <a href="https://console.developers.google.com/" title="Console"> console per sviluppatori di google</a> è necessario creare un nuovo progetto, cliccando nel menù a tendina a destra della scritta Google Cloud </p>
 
 
 <img src="/image/screen1.png" width=500>
