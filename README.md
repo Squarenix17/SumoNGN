@@ -123,7 +123,7 @@ Questo file andrà rinominato in token.json ed inserito nella cartella del progr
 
 <p align="justify">Ora sarà necessario creare il foglio di calcolo su Google docs, il quale è importante che venga rinominato Sumo Data (Con nomi differenti la simulazione non funzionerà), noi consigliamo semplicemente di creare una copia del file da noi creato: <a href="https://docs.google.com/spreadsheets/d/1YQGfxctZY_-qP6vxARLi4rUKwdY9jNnQ538quYU-xm4/edit#gid=477510729/"> Sumo Data</a>
 
-<p align="justify">Nella copia del file Sumo Data è importante condividere l’accesso con la mail del Service Account creato in precedenza: 
+<p align="justify">Nella copia del file Sumo Data è importante condividere l’accesso con la mail del Service Account creato in precedenza:</p> 
 
 <img src="/image/screen15.png" width=500>
 
@@ -140,7 +140,7 @@ e per far partire la simulazione sarà necessario premere sulla freccia verde Ru
 
 <img src="/image/screen18.png" width=500>
 
-<p align="justify">per velocizzare la simulazione suggeriamo di ridurre il Delay a 0 e impostare la visualizzazione della mappa in faster standard
+<p align="justify">per velocizzare la simulazione suggeriamo di ridurre il Delay a 0 e impostare la visualizzazione della mappa in faster standard</p>
 
 <img src="/image/screen19.png" width=500>
 
