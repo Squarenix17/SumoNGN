@@ -32,11 +32,11 @@ Fabrizio Granelli
 
 # Introduzione
 
-<img src="/image/app.png">
+<img src="image/app.png">
 
 <p align="justify">Il progetto realizzato permette di ottenere un riscontro sulle interconnessioni degli autobus della città di Trento, fornisce il numero di incroci, l’orario di incrocio e il tempo di connessione tra due bus che si incrociano in un area di diametro 20 metri.</p>
 
-<img src="/image/bus1.png" width=500>
+<img src="image/bus1.png" width=500>
 
 La struttura del progetto si può suddividere in quattro fasi:
 - Setting e requisiti di Network iniziali 
@@ -44,7 +44,7 @@ La struttura del progetto si può suddividere in quattro fasi:
 - Elaborazione dei dati con Python e TraCI
 - Esportazione dei risultati su Google Sheet
 
-<img src="/image/struct.png" width=500>
+<img src="image/struct.png" width=500>
 
 
 # Tutorial Progetto SUMO - Come Avviare la Simulazione
@@ -72,84 +72,84 @@ Installare Python ed i moduli utilizzando PIP, il package installer di Python pe
 <p align="justify">Dalla <a href="https://console.developers.google.com/" title="Console"> console per sviluppatori di google</a> è necessario creare un nuovo progetto, cliccando nel menù a tendina a destra della scritta Google Cloud </p>
 
 
-<img src="/image/screen1.png" width=500>
+<img src="image/screen1.png" width=500>
 
-<img src="/image/screen2.png" width=500>
+<img src="image/screen2.png" width=500>
 
 Creare un progetto:
 
-<img src="/image/screen3.png" width=500>
+<img src="image/screen3.png" width=500>
 
 Una volta nella dashboard del  progetto, cercare nella barra di ricerca: Google Sheets API
 
-<img src="/image/screen4.png" width=500>
+<img src="image/screen4.png" width=500>
 
-<img src="/image/screen5.png" width=500>
+<img src="image/screen5.png" width=500>
 
 Ed abilitare le API, fare la stessa cosa per le API di Google Drive
 
-<img src="/image/screen6.png" width=500>
+<img src="image/screen6.png" width=500>
 
 Recandosi nella dashboard selezionare Service Accounts
 
-<img src="/image/screen7.png" width=500>
+<img src="image/screen7.png" width=500>
 
 E creare un nuovo service account
 
-<img src="/image/screen8.png" width=500>
+<img src="image/screen8.png" width=500>
 
-<img src="/image/screen9.png" width=500>
+<img src="image/screen9.png" width=500>
 
 premere create and continue e selezionare il ruolo Editor:
 
-<img src="/image/screen10.png" width=500>
+<img src="image/screen10.png" width=500>
 
 Una volta creato cliccare l’email del Service Account
 
-<img src="/image/screen11.png" width=500>
+<img src="image/screen11.png" width=500>
 
 Recandosi in Keys
 
-<img src="/image/screen12.png" width=500>
+<img src="image/screen12.png" width=500>
 
 è necessario creare una nuova chiave privata in json:
 
-<img src="/image/screen13.png" width=500>
+<img src="image/screen13.png" width=500>
 
 Questo file andrà rinominato in token.json ed inserito nella cartella del programma.
 
-<img src="/image/screen14.png" width=500>
+<img src="image/screen14.png" width=500>
 
 
 <p align="justify">Ora sarà necessario creare il foglio di calcolo su Google docs, il quale è importante che venga rinominato Sumo Data (Con nomi differenti la simulazione non funzionerà), noi consigliamo semplicemente di creare una copia del file da noi creato: <a href="https://docs.google.com/spreadsheets/d/1YQGfxctZY_-qP6vxARLi4rUKwdY9jNnQ538quYU-xm4/edit#gid=477510729/"> Sumo Data</a>
 
 <p align="justify">Nella copia del file Sumo Data è importante condividere l’accesso con la mail del Service Account creato in precedenza:</p> 
 
-<img src="/image/screen15.png" width=500>
+<img src="image/screen15.png" width=500>
 
 
 <p align="justify">Se sono stati eseguiti tutti i passaggi correttamente è ora possibile lanciare la simulazione utilizzando il file runner.py 
 
-<img src="/image/screen16.png" width=500>
+<img src="image/screen16.png" width=500>
 
 Si aprirà in automatico il file Google Sheet Sumo Data
 
-<img src="/image/screen17.png" width=500>
+<img src="image/screen17.png" width=500>
 
 e per far partire la simulazione sarà necessario premere sulla freccia verde Run
 
-<img src="/image/screen18.png" width=500>
+<img src="image/screen18.png" width=500>
 
 <p align="justify">per velocizzare la simulazione suggeriamo di ridurre il Delay a 0 e impostare la visualizzazione della mappa in faster standard</p>
 
-<img src="/image/screen19.png" width=500>
+<img src="image/screen19.png" width=500>
 
 si apre anche la finestra dello script python che contiene:
 - Orario
 - Numero bus presenti sulla mappa
 - Numero di bus connessi tra loro
 
-<img src="/image/screen20.png" width=500>
+<img src="image/screen20.png" width=500>
 
 e man mano che il programma rileva le connessioni tra i bus le trascriverà sul file Google Sheet indicando 
 - Nome del bus principale
@@ -157,7 +157,7 @@ e man mano che il programma rileva le connessioni tra i bus le trascriverà sul 
 - Tempo per il quale rimangono connessi
 - Orario in cui avviene l’incrocio
 
-<img src="/image/screen21.png" width=500>
+<img src="image/screen21.png" width=500>
 
 <p align="justify">L’aggiornamento sul foglio di calcolo avviene ogni 1800 secondi (30 minuti) trascorsi all’interno della simulazione.</p>
 
