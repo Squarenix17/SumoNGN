@@ -64,20 +64,17 @@ def run():
 
                     #if the list with the main bus doesn't exist, it's created 
                     if support.inList(currentBus, connectedBus) == None:
-                        #print("LISTA ASSENTE, LA CREO")
                         addBus = [currentBus, 
                                     {currentConnectedBus:[1, str(datetime.timedelta(seconds = double(traci.simulation.getTime())))]}]
                         connectedBus.append(addBus)
                     
                     #if the list exist, but the connected bus isn't in the dictionary, the dictionary is created  
                     elif support.inDictionary(currentConnectedBus, connectedBus[support.inList(currentBus, connectedBus)]) == False:
-                        #print("DIZIONARIO ASSENTE, LO CREO")
                         addDictionary = {currentConnectedBus:[1, str(datetime.timedelta(seconds = double(traci.simulation.getTime())))]}
                         connectedBus[support.inList(currentBus, connectedBus)][1].update(addDictionary)
 
                     #if the list and the dictionary exist, the conncetion time is increased 
                     elif support.inDictionary(currentConnectedBus, connectedBus[support.inList(currentBus, connectedBus)]):
-                        #print("STESSO DIZIONARIO, AGGIORNO IL TEMPO")
                         time = connectedBus[support.inList(currentBus, connectedBus)][1].get(currentConnectedBus)[0]+1
                         meatingTime = connectedBus[support.inList(currentBus, connectedBus)][1].get(currentConnectedBus)[1]
                         
