@@ -299,7 +299,7 @@ Dopo aver avviato sumo i client si connettono a instaurando una connessione TCP 
 <img src="/image/screen26.png" width=500>
 
 ### TraCI - Messaggio TCP
-<p align="justify">Il messaggio TCP è un raccoglitore di comandi o risultati, ogni messaggio pertanto è costituito da un’intestazione che fornisce la sua dimensione complessiva e un insieme di comandi inseriti dietro ad esso. La lunghezza e l'identificatore di ciascun comando sono posto davanti al comando. Esempio:
+<p align="justify">Il messaggio TCP è un raccoglitore di comandi o risultati, ogni messaggio pertanto è costituito da un’intestazione che fornisce la sua dimensione complessiva e un insieme di comandi inseriti dietro ad esso. La lunghezza e l'identificatore di ciascun comando sono posto davanti al comando. Esempio:</p>
 
 <img src="/image/screen27.png" width=500>
 
