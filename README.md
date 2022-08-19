@@ -387,7 +387,7 @@ e per far partire la simulazione sarà necessario premere sulla freccia verde Ru
 
 <img src="/image/screen18.png" width=500>
 
-<p align="justify">per velocizzare la simulazione suggeriamo di ridurre il Delay a 0 e impostare la visualizzazione della mappa in faster standard
+<p align="justify">per velocizzare la simulazione suggeriamo di ridurre il Delay a 0 e impostare la visualizzazione della mappa in faster standard</p>
 
 <img src="/image/screen19.png" width=500>
 
