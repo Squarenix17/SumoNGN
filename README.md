@@ -36,7 +36,7 @@ Fabrizio Granelli
 
 <p align="justify">Il progetto realizzato permette di ottenere un riscontro sulle interconnessioni degli autobus della città di Trento, fornisce il numero di incroci, l’orario di incrocio e il tempo di connessione tra due bus che si incrociano in un area di diametro 20 metri.</p>
 
-<img src="/image/bus.png" width=500>
+<img src="/image/bus1.png" width=500>
 
 La struttura del progetto si può suddividere in quattro fasi:
 - Setting e requisiti di Network iniziali 
@@ -44,7 +44,7 @@ La struttura del progetto si può suddividere in quattro fasi:
 - Elaborazione dei dati con Python e TraCI
 - Esportazione dei risultati su Google Sheet
 
-<img src="/image/struttura.png" width=500>
+<img src="/image/struct.png" width=500>
 
 
 # Tutorial Progetto SUMO - Come Avviare la Simulazione
