@@ -1,19 +1,19 @@
 # Tutorial Progetto SUMO - Come Ricreare la Simulazione
 
 ## Indice
-- [Introduzione](https://github.com/Squarenix17/SumoNGN/blob/main/README.md#tutorial-progetto-sumo---come-ricreare-la-simulazione)
-- [OSM Web Wizard](https://github.com/Squarenix17/SumoNGN/blob/main/README.md#osm-web-wizard)
-  - [Requisiti](https://github.com/Squarenix17/SumoNGN/blob/main/README.md#aggiornamento-api)
-- [Generazione ed esecuzione dello scenario](https://github.com/Squarenix17/SumoNGN/blob/main/README.md#generazione-ed-esecuzione-dello-scenario)
-- [GTFS](https://github.com/Squarenix17/SumoNGN/blob/main/README.md#gtfs)
-  - [Calcolo percorso più breve](https://github.com/Squarenix17/SumoNGN/blob/main/README.md#calcolo-percorso-pi%C3%B9-breve)
-  - [Percorso da OSM](https://github.com/Squarenix17/SumoNGN/blob/main/README.md#percorso-da-osm)
-- [Traci](https://github.com/Squarenix17/SumoNGN/blob/main/README.md#traci)
-  - [Utilizzo di TraCI](https://github.com/Squarenix17/SumoNGN/blob/main/README.md#utilizzo-di-traci)
-  - [TraCI Protocol](https://github.com/Squarenix17/SumoNGN/blob/main/README.md#traci-protocol)
-  - [TraCI - Messaggio TCP](https://github.com/Squarenix17/SumoNGN/blob/main/README.md#traci---messaggio-tcp)
-  - [Interfacciare TraCI con Python](https://github.com/Squarenix17/SumoNGN/blob/main/README.md#interfacciare-traci-con-python)
-- [Google Sheet](https://github.com/Squarenix17/SumoNGN/blob/main/README.md#google-sheet-1)
+- [Introduzione](https://github.com/Squarenix17/SumoNGN/tree/main/tutorial#introduzione)
+- [OSM Web Wizard](https://github.com/Squarenix17/SumoNGN/tree/main/tutorial#osm-web-wizard)
+  - [Requisiti](https://github.com/Squarenix17/SumoNGN/tree/main/tutorial#requisiti)
+- [Generazione ed esecuzione dello scenario](https://github.com/Squarenix17/SumoNGN/tree/main/tutorial#generazione-ed-esecuzione-dello-scenario)
+- [GTFS](https://github.com/Squarenix17/SumoNGN/tree/main/tutorial#gtfs)
+  - [Calcolo percorso più breve](https://github.com/Squarenix17/SumoNGN/tree/main/tutorial#calcolo-percorso-pi%C3%B9-breve)
+  - [Percorso da OSM](https://github.com/Squarenix17/SumoNGN/tree/main/tutorial#percorso-da-osm)
+- [Traci](https://github.com/Squarenix17/SumoNGN/tree/main/tutorial#traci)
+  - [Utilizzo di TraCI](https://github.com/Squarenix17/SumoNGN/tree/main/tutorial#utilizzo-di-traci)
+  - [TraCI Protocol](https://github.com/Squarenix17/SumoNGN/tree/main/tutorial#traci-protocol)
+  - [TraCI - Messaggio TCP](https://github.com/Squarenix17/SumoNGN/tree/main/tutorial#traci---messaggio-tcp)
+  - [Interfacciare TraCI con Python](https://github.com/Squarenix17/SumoNGN/tree/main/tutorial#interfacciare-traci-con-python)
+- [Google Sheet](https://github.com/Squarenix17/SumoNGN/tree/main/tutorial#google-sheet)
 
 ## Introduzione
 

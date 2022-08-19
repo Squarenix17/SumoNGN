@@ -15,7 +15,7 @@ Fabrizio Granelli
   - [Requisiti](https://github.com/Squarenix17/SumoNGN/blob/main/README.md#requisiti)
   - [Procedura](https://github.com/Squarenix17/SumoNGN/blob/main/README.md#procedura)
   - [Google Sheet](https://github.com/Squarenix17/SumoNGN/blob/main/README.md#google-sheet)
-- [Tutorial Progetto SUMO - Come Ricreare la Simulazione](https://github.com/Squarenix17/SumoNGN/blob/main/README.md#tutorial-progetto-sumo---come-ricreare-la-simulazione)
+- [Tutorial Progetto SUMO - Come Ricreare la Simulazione](https://github.com/Squarenix17/SumoNGN/tree/main/tutorial#tutorial-progetto-sumo---come-ricreare-la-simulazione)
 - [Descrizione Codice](https://github.com/Squarenix17/SumoNGN/blob/main/README.md#descrizione-codice)
   - [Introduzione](https://github.com/Squarenix17/SumoNGN/blob/main/README.md#introduzione-2)
   - [File runner.py](https://github.com/Squarenix17/SumoNGN/blob/main/README.md#file-runnerpy)
@@ -162,7 +162,7 @@ e man mano che il programma rileva le connessioni tra i bus le trascriverà sul 
 <p align="justify">L’aggiornamento sul foglio di calcolo avviene ogni 1800 secondi (30 minuti) trascorsi all’interno della simulazione.</p>
 
 
-# Tutorial Progetto SUMO - Come Ricreare la Simulazione
+# [Tutorial Progetto SUMO - Come Ricreare la Simulazione](https://github.com/Squarenix17/SumoNGN/tree/main/tutorial#tutorial-progetto-sumo---come-ricreare-la-simulazione)
  
 # Descrizione Codice
 ## Introduzione
