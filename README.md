@@ -81,7 +81,7 @@ Installare Python ed i moduli utilizzando PIP, il package installer di Python pe
 
 ## Google Sheet:
 
-<p align="justify">Dalla [console per sviluppatori di google](https://console.developers.google.com/) è necessario creare un nuovo progetto, cliccando nel menù a tendina a destra della scritta Google Cloud
+<p align="justify">Dalla <a href="https://console.developers.google.com/" title="Console"> console per sviluppatori di google</a> è necessario creare un nuovo progetto, cliccando nel menù a tendina a destra della scritta Google Cloud
 
 
 <img src="/image/screen1.png" width=500>
@@ -182,8 +182,8 @@ La creazione della simulazione PT consiste in tre fasi:
 
 ## OSM Web Wizard
 
-https://sumo.dlr.de/docs/Tutorials/OSMWebWizard.html
-<p align="justify">OSM Web Wizard offre una delle soluzioni più semplici per lavorare con SUMO. Sulla base di una selezione di un estratto della mappa da openstreetmap, è possibile configurare una domanda di traffico randomizzata ed eseguire e visualizzare lo scenario nel sumo-gui. Questo tutorial ti guiderà passo dopo passo dalla selezione dell'estratto della mappa alla definizione della domanda di traffico attraverso l'esecuzione e la visualizzazione dello scenario in sumo-gui.
+
+<p align="justify"><a href="https://sumo.dlr.de/docs/Tutorials/OSMWebWizard.html" title="Console"> OSM Web Wizard</a> offre una delle soluzioni più semplici per lavorare con SUMO. Sulla base di una selezione di un estratto della mappa da openstreetmap, è possibile configurare una domanda di traffico randomizzata ed eseguire e visualizzare lo scenario nel sumo-gui. Questo tutorial ti guiderà passo dopo passo dalla selezione dell'estratto della mappa alla definizione della domanda di traffico attraverso l'esecuzione e la visualizzazione dello scenario in sumo-gui.
  
 
 ### Requisiti
@@ -216,9 +216,9 @@ S<p align="justify">UMO supporta diversi mezzi di trasporto. Nel pannello di gen
 
 <img src="/image/scree24.png" width=500>
 
-## GTFS
-https://sumo.dlr.de/docs/Tutorials/GTFS.html 
-<p align="justify">Questa sezione mostra come perfezionare lo scenario di simulazione del Trasporto Pubblico (PT) esistente con i dati nel formato GTFS (General Transit Specification Format), disponibile per molte regioni.
+## [GTFS](https://sumo.dlr.de/docs/Tutorials/GTFS.html)
+
+<p align="justify">Questa sezione mostra come perfezionare lo scenario di simulazione del Trasporto Pubblico (PT) esistente con i dati nel formato <a href="https://developers.google.com/transit/gtfs"> GTFS</a> (General Transit Specification Format), disponibile per molte regioni.
 
 Per questo tutorial è stato scelto il giorno 15/07/2022 e di importare solamente bus.
 
@@ -275,7 +275,7 @@ Per eseguire la chiamata della simulazione:
 
 ```sumo-gui -n osm.net.xml --additional gtfs_publictransport.add.xml --routes gtfs_publictransport.rou.xml```
 
-## Traci
+## [Traci](https://sumo.dlr.de/docs/TraCI.html)
 https://sumo.dlr.de/pydoc/sumolib.html
 https://sumo.dlr.de/docs/TraCI/Interfacing_TraCI_from_Python.htm
 https://sumo.dlr.de/docs/TraCI.html
@@ -287,13 +287,14 @@ https://sumo.dlr.de/docs/TraCI/Protocol.html
 <p align="justify">TraCI utilizza un'architettura client/server basata su TCP per fornire l'accesso a sumo. In tal modo, sumo funge da server che viene avviato con opzioni aggiuntive della riga di comando: --remote-port <INT> dove <INT> è la porta su cui sumo ascolterà le connessioni in entrata.
 <p align="justify">Quando TraCI viene avviato utilizzando remote-port, sumo prepara la simulazione ed attende che tutte le applicazioni esterne si colleghino. L’esecuzione di sumo prosegue fino a che il client non richiede la fine della simulazione.
 
-### TraCI Protocol
+### [TraCI Protocol](https://sumo.dlr.de/docs/TraCI/Protocol.html)
 Dopo aver avviato sumo i client si connettono a instaurando una connessione TCP alla porta designata.
 
 <img src="/image/screen25.png" width=500>
 
 <p align="justify">Una volta avviata la simulazione il client invia dei comandi a sumo per controllare lo stato della simulazione, questi comandi possono influenzare il comportamento dei veicoli o possono richiedere dei dettagli sulla simulazione. Sumo risponde singolarmente a ciascun comando. 
-<p align="justify">La simulazione procederà solamente una volta che tutti i comandi del client avranno ricevuto risposta. Il client può anche mettere fine alla simulazione utilizzando l’apposito [comando di chiusura](https://sumo.dlr.de/docs/TraCI/Control-related_commands.html#command_0x7f_close) . La simulazione terminerà alla chiusura del client. 
+<p align="justify">La simulazione procederà solamente una volta che tutti i comandi del client avranno ricevuto risposta. Il client può anche mettere fine alla simulazione utilizzando l’apposito <a href="https://sumo.dlr.de/docs/TraCI/Control-related_commands.html#command_0x7f_close"> comando di chiusura</a>
+. La simulazione terminerà alla chiusura del client. 
 
 <img src="/image/screen26.png" width=500>
 
@@ -315,7 +316,8 @@ Le funzioni spiegate in modo dettagliato si possono osservare nella [documentazi
 Al fine di comprendere meglio come interfacciare TraCI con Python rimandiamo alla [documentazione ufficiale](https://sumo.dlr.de/docs/TraCI/Interfacing_TraCI_from_Python.html)
 Per utilizzare traci in python, una volta settate correttamente le variabili d’ambiente, è sufficiente utilizzare il comando import traci
 ## Google Sheet
-Per connettere lo script a un file su Google Sheet bisogna andare sulla console per sviluppatori di google (https://console.developers.google.com/) e creare un nuovo progetto, cliccando nel menù a tendina a destra della scritta Google Cloud
+Per connettere lo script a un file su Google Sheet bisogna andare sulla <a href="https://console.developers.google.com/" title="Console">
+console per sviluppatori di google</a> e creare un nuovo progetto, cliccando nel menù a tendina a destra della scritta Google Cloud
 
 <img src="/image/screen1.png" width=500>
 
