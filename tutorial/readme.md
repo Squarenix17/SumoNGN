@@ -210,7 +210,7 @@ Questo file andrà rinominato in token.json ed inserito nella cartella del progr
 <img src="/image/screen14.png" width=500>
 
 
-<p align="justify">Ora sarà necessario creare il foglio di calcolo su Google docs, il quale è importante che venga rinominato Sumo Data (Con nomi differenti la simulazione non funzionerà), noi consigliamo semplicemente di creare una copia del file da noi creato: Sumo Data 
+<p align="justify">Ora sarà necessario creare il foglio di calcolo su Google docs, il quale è importante che venga rinominato Sumo Data (Con nomi differenti la simulazione non funzionerà), noi consigliamo semplicemente di creare una copia del file da noi creato: <a href="https://docs.google.com/spreadsheets/d/1YQGfxctZY_-qP6vxARLi4rUKwdY9jNnQ538quYU-xm4/edit#gid=477510729/"> Sumo Data</a>
 
 <p align="justify">Nella copia del file Sumo Data è importante condividere l’accesso con la mail del Service Account creato in precedenza: 
 
