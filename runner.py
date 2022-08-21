@@ -106,13 +106,13 @@ def run():
     sys.stdout.flush()
 
 
-    if __name__ == "__main__":
-        options = get_options()
-        if options.nogui:
-            sumoBinary = checkBinary('sumo')
-        else: 
-            sumoBinary = checkBinary('sumo-gui')
-        
-        traci.start([sumoBinary, "-c", "osm.sumocfg"])
-        
-        run()
+if __name__ == "__main__":
+    options = get_options()
+    if options.nogui:
+        sumoBinary = checkBinary('sumo')
+    else: 
+        sumoBinary = checkBinary('sumo-gui')
+    
+    traci.start([sumoBinary, "-c", "osm.sumocfg"])
+    
+    run()
