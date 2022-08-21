@@ -1,15 +1,26 @@
-import os
-import sys
-import optparse
-import datetime
-import support
-import traci
-import gSheetsManager
 
-from numpy import double, equal
-from pandas import options
-from email.policy import default
-from sumolib import checkBinary
+try: 
+    import os
+    import sys
+    import optparse
+    import datetime
+    import support
+    import traci
+    import gSheetsManager
+    
+
+    from numpy import double, equal
+    from pandas import options
+    from email.policy import default
+    from sumolib import checkBinary
+
+except Exception as e:
+    import time
+    import sys
+    print(e)
+    time.sleep(10)
+    sys.exit()
+    
 
 if 'SUMO_HOME' in os.environ:
      tools = os.path.join(os.environ['SUMO_HOME'], 'tools')
@@ -95,14 +106,13 @@ def run():
     sys.stdout.flush()
 
 
-if __name__ == "__main__":
-    options = get_options()
-    if options.nogui:
-        sumoBinary = checkBinary('sumo')
-    else: 
-        sumoBinary = checkBinary('sumo-gui')
-    
-    traci.start([sumoBinary, "-c", "osm.sumocfg"])
-    
-    run()
-
+    if __name__ == "__main__":
+        options = get_options()
+        if options.nogui:
+            sumoBinary = checkBinary('sumo')
+        else: 
+            sumoBinary = checkBinary('sumo-gui')
+        
+        traci.start([sumoBinary, "-c", "osm.sumocfg"])
+        
+        run()
